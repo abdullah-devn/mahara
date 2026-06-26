@@ -3,9 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مِهارة</title>
+<title>مِهارة — تعلّم التقنية بالعربية وابنِ مستقبلك</title>
+<meta name="description" content="منصة مِهارة التعليمية: تعلّم إنشاء المواقع، تطبيقات الهواتف، الأمن السيبراني، الاختراق الأخلاقي، صنع البوتات والذكاء الاصطناعي بأسلوب عملي بالعربية، مع مشروع حقيقي وشهادة إتمام لكل مسار.">
+<meta name="theme-color" content="#0d1117">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232ea043'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%230d1117' font-family='sans-serif' font-weight='bold'%3E%D9%85%D9%90%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="مِهارة — تعلّم التقنية بالعربية">
+<meta property="og:description" content="مسارات عملية بالعربية: مواقع، تطبيقات، أمن سيبراني، اختراق أخلاقي، بوتات، وذكاء اصطناعي — مع مشروع حقيقي وشهادة لكل مسار.">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="مِهارة — تعلّم التقنية بالعربية">
+<meta name="twitter:description" content="مسارات تقنية عملية بالعربية مع مشروع حقيقي وشهادة لكل مسار.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style id="critical-splash">
+#splash{position:fixed;inset:0;z-index:99999;background:#0d1117;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;font-family:'IBM Plex Sans Arabic','Segoe UI',Tahoma,sans-serif;transition:opacity .5s ease}
+#splash.hide{opacity:0;pointer-events:none}
+#splash .sp-logo{font-size:2.3rem;font-weight:700;color:#39d353;letter-spacing:.04em}
+#splash .sp-bar{width:130px;height:3px;border-radius:3px;background:#21262d;overflow:hidden;position:relative}
+#splash .sp-bar::before{content:"";position:absolute;top:0;left:-45%;height:100%;width:45%;background:#39d353;border-radius:3px;animation:sp-slide 1s infinite ease-in-out}
+#splash .sp-sub{font-size:.68rem;letter-spacing:.34em;color:#5b6470}
+@keyframes sp-slide{0%{left:-45%}100%{left:115%}}
+</style>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth;font-size:16px}
@@ -505,33 +525,66 @@ body.light{
   font-size:1rem;color:#333;display:flex;align-items:center;justify-content:center;
 }
 .cert-inner{
-  padding:40px 32px 32px;
+  padding:36px 30px 30px;
   text-align:center;
   color:#1a1a1a;
   font-family:'IBM Plex Sans Arabic',sans-serif;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(46,160,67,.05), transparent 22%),
+    radial-gradient(circle at 88% 92%, rgba(46,160,67,.05), transparent 22%),
+    #fdfdfb;
 }
 .cert-border{
-  border:2px solid #1a1a1a;
-  padding:32px 24px;
+  border:1px solid #d8d8cf;
+  outline:3px double #2ea043;
+  outline-offset:5px;
+  padding:34px 26px 28px;
   position:relative;
+  background:linear-gradient(#fff,#fcfcf8);
 }
 .cert-border::before,.cert-border::after{
   content:'';position:absolute;
-  width:16px;height:16px;
+  width:22px;height:22px;
   border-color:#2ea043;border-style:solid;
 }
-.cert-border::before{top:-2px;right:-2px;border-width:2px 2px 0 0}
-.cert-border::after{bottom:-2px;left:-2px;border-width:0 0 2px 2px}
-.cert-logo{font-size:1.1rem;font-weight:700;color:#2ea043;margin-bottom:20px;letter-spacing:.05em}
-.cert-heading{font-size:.72rem;letter-spacing:.18em;color:#888;text-transform:uppercase;margin-bottom:8px}
-.cert-name{font-size:1.6rem;font-weight:700;color:#1a1a1a;margin-bottom:16px;border-bottom:1px solid #e0e0e0;padding-bottom:16px}
-.cert-body{font-size:.82rem;color:#555;line-height:1.75;margin-bottom:20px}
-.cert-track{font-size:1rem;font-weight:700;color:#1a1a1a;margin-bottom:20px}
-.cert-footer{display:flex;justify-content:space-between;align-items:flex-end;margin-top:24px;padding-top:16px;border-top:1px solid #e0e0e0}
-.cert-sig{text-align:center}
-.cert-sig-line{width:80px;height:1px;background:#1a1a1a;margin:0 auto 6px}
-.cert-sig span{font-size:.68rem;color:#888;letter-spacing:.08em;text-transform:uppercase}
-.cert-date{font-size:.72rem;color:#888}
+.cert-border::before{top:-8px;right:-8px;border-width:2px 2px 0 0}
+.cert-border::after{bottom:-8px;left:-8px;border-width:0 0 2px 2px}
+.cert-logo{font-size:1.25rem;font-weight:700;color:#2ea043;margin-bottom:4px;letter-spacing:.04em}
+.cert-logo-sub{font-size:.6rem;letter-spacing:.32em;color:#b3b3a8;text-transform:uppercase;margin-bottom:18px}
+.cert-heading{font-size:.7rem;letter-spacing:.34em;color:#9a9a8e;text-transform:uppercase;margin-bottom:14px}
+.cert-name{font-size:1.7rem;font-weight:700;color:#15301d;margin:0 auto 14px;padding-bottom:14px;max-width:80%;border-bottom:2px solid #2ea043;font-family:'Amiri','IBM Plex Sans Arabic',serif}
+.cert-body{font-size:.8rem;color:#555;line-height:1.85;margin-bottom:16px}
+.cert-track{display:inline-block;font-size:1.05rem;font-weight:700;color:#15301d;margin-bottom:18px;padding:5px 18px;background:rgba(46,160,67,.08);border-radius:30px}
+.cert-footer{display:flex;justify-content:space-between;align-items:flex-end;margin-top:18px;padding-top:14px;gap:8px}
+.cert-sig{text-align:center;flex:1}
+.cert-sig-mark{font-family:'Amiri',serif;font-size:1.7rem;color:#15301d;line-height:1;font-style:italic;font-weight:700;transform:rotate(-6deg);margin-bottom:2px}
+.cert-sig-line{width:88%;max-width:120px;height:1px;background:#9a9a8e;margin:0 auto 6px}
+.cert-sig span{font-size:.62rem;color:#9a9a8e;letter-spacing:.1em;text-transform:uppercase}
+.cert-date{font-size:.7rem;color:#888}
+/* SEAL / STAMP */
+.cert-seal{
+  position:absolute;bottom:46px;left:50%;transform:translateX(-50%) rotate(-9deg);
+  width:88px;height:88px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  border:2px solid #2ea043;
+  box-shadow:inset 0 0 0 4px rgba(46,160,67,.18);
+  opacity:.92;
+  pointer-events:none;
+}
+.cert-seal::before{
+  content:'';position:absolute;inset:8px;border-radius:50%;
+  border:1px dashed rgba(46,160,67,.5);
+}
+.cert-seal-core{font-family:'Amiri',serif;font-weight:700;font-size:1.5rem;color:#2ea043;line-height:1}
+.cert-seal-ring{
+  position:absolute;inset:0;
+  font-size:.5rem;letter-spacing:.05em;color:#2ea043;font-weight:600;
+}
+@media print{
+  .cert-actions,.cert-close{display:none!important}
+  .cert-overlay{position:static;background:#fff;padding:0}
+  .cert-box{box-shadow:none;max-width:100%}
+}
 .cert-actions{display:flex;gap:8px;justify-content:center;margin-top:16px}
 .cert-act-btn{
   display:flex;align-items:center;gap:6px;
@@ -598,7 +651,7 @@ body.light{
 .tr-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(13,17,23,.3))}
 .course-banner{width:100%;height:160px;border-radius:14px;overflow:hidden;position:relative;margin-bottom:18px;border:1px solid var(--line)}
 .course-banner img{width:100%;height:100%;object-fit:cover}
-.course-banner::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(13,17,23,.85))}
+.course-banner::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(57,211,83,.08) 0%,transparent 35%,rgba(13,17,23,.88))}
 
 /* ===== ENHANCEMENTS ===== */
 /* clean code/prompt/callout */
@@ -617,7 +670,7 @@ body.light{
 .lp-inner h4.step-h{font-size:.98rem;font-weight:700;color:var(--text);margin:20px 0 10px;padding-right:13px;border-right:3px solid var(--green)}
 /* hero bg + about */
 .home-hero{position:relative;overflow:hidden}
-.hero-bg-img{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1600&q=80") center/cover;opacity:.14;z-index:0}
+.hero-bg-img{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1200&q=70") center/cover;opacity:.14;z-index:0}
 .hero-inner-c{position:relative;z-index:1}
 .about-sec{padding:40px 16px;border-top:1px solid var(--line);background:var(--bg2)}
 .about-h{text-align:center;max-width:540px;margin:0 auto 26px}
@@ -640,7 +693,7 @@ body.light{
 .buy-ov{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:300;display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:30px 14px}
 .buy-ov.open{display:flex}
 .pf-top{display:flex;align-items:center;gap:14px;margin-bottom:18px}
-.pf-avatar{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#39d353,#2ea043);display:grid;place-items:center;color:#0d1117;font-weight:700;font-size:1.5rem;flex:none}
+.pf-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#39d353,#2ea043);display:grid;place-items:center;color:#0d1117;font-weight:700;font-size:1.35rem;flex:none;box-shadow:0 0 0 3px rgba(57,211,83,.15),0 4px 12px rgba(0,0,0,.25)}
 .pf-info{min-width:0}
 .pf-email{font-size:.92rem;font-weight:600;color:var(--text);direction:ltr;text-align:right;word-break:break-all}
 .pf-meta{font-size:.78rem;color:var(--muted);margin-top:3px}
@@ -715,9 +768,118 @@ body.light{
 @media(max-width:480px){.contact-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
+.code-box .c-tag{color:#e57373}.code-box .c-attr{color:#81d4fa}.code-box .c-val{color:#a5d6a7}.code-box .c-prop{color:#ce93d8}.code-box .c-com{color:#6a737d;font-style:italic}
+.code-box .c-kw{color:#29b6f6}
+.code-box .c-type{color:#80cbc4}
+.code-box .c-str{color:#a5d6a7}
+.code-box .c-fn{color:#ce93d8}
+.code-box .c-com{color:#555}
+.code-box .c-key{color:#f48fb1}
+.code-box .c-num{color:#ffcc80}
+.code-box .c-widget{color:#f48fb1}
+.lp-inner .term-blue{color: #29b6f6; font-weight: 600;}
+.lp-inner .term-purple{color: #ce93d8; font-weight: 600;}
+.lp-inner /* مقارنة Flutter vs React Native */
+  .compare-grid{display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;}
+.lp-inner .compare-card{border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #222;}
+.lp-inner .compare-card.flutter{background: #0a1929; border-color: #29b6f640;}
+.lp-inner .compare-card.react{background: #1a0a2e; border-color: #ce93d840;}
+.lp-inner .compare-card h4{font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #222;}
+.lp-inner .compare-card.flutter h4{color: #29b6f6;}
+.lp-inner .compare-card.react h4{color: #ce93d8;}
+.lp-inner .compare-card ul{list-style: none; display: flex; flex-direction: column; gap: 10px;}
+.lp-inner .compare-card ul li{font-size: 14px;
+    color: #bbb;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.6;}
+.lp-inner .compare-card ul li::before{content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 7px;}
+.lp-inner .compare-card.flutter ul li::before{background: #29b6f6;}
+.lp-inner .compare-card.react ul li::before{background: #ce93d8;}
+.lp-inner .verdict-box{background: #111;
+    border: 1px solid #1e1e1e;
+    border-radius: 10px;
+    padding: 24px;
+    margin-top: 20px;}
+.lp-inner .verdict-box h4{font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 16px;}
+.lp-inner .verdict-row{display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    align-items: flex-start;}
+.lp-inner .verdict-row:last-child{margin-bottom: 0;}
+.lp-inner .verdict-label{font-size: 13px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    flex-shrink: 0;}
+.lp-inner .verdict-label.fl{background: #29b6f620; color: #29b6f6;}
+.lp-inner .verdict-label.rn{background: #ce93d820; color: #ce93d8;}
+.lp-inner .verdict-row p{color: #bbb; font-size: 14px; margin: 0;}
+.lp-inner .compare-grid{grid-template-columns: 1fr;}
+.lp-inner .code-label{font-size: 12px;
+    color: #888;
+    font-family: 'Courier New', monospace;
+    margin-bottom: -8px;
+    padding: 8px 24px;
+    background: #0d0d0d;
+    border: 1px solid #222;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    direction: ltr;
+    text-align: left;}
+.lp-inner .code-label + .code-block{border-radius: 0 0 8px 8px;
+    margin-top: 0;}
+.lp-inner .output-box{background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-right: 3px solid #ffd54f;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 20px;
+    margin: 8px 0 16px;
+    direction: ltr;
+    text-align: left;}
+.lp-inner .l2 .output-box{border-right-color: #ffb74d;}
+.lp-inner .output-box .label{font-size: 11px;
+    color: #555;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 6px;}
+.lp-inner .output-box pre{font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #a5d6a7;
+    line-height: 1.7;}
+
 </style>
 </head>
 <body>
+
+<div id="splash"><div class="sp-logo">مِهارة</div><div class="sp-bar"></div><div class="sp-sub">MAHARA</div></div>
+<script>
+(function(){
+  var hidden=false;
+  function hideSplash(){if(hidden)return;hidden=true;var s=document.getElementById('splash');if(!s)return;s.classList.add('hide');setTimeout(function(){if(s&&s.parentNode)s.style.display='none';},550);}
+  if(document.readyState==='complete'){setTimeout(hideSplash,200);}
+  else{window.addEventListener('load',function(){setTimeout(hideSplash,200);});}
+  setTimeout(hideSplash,4500);
+})();
+</script>
 
 <!-- NAV -->
 <nav class="nav">
@@ -745,11 +907,11 @@ body.light{
  <div class="hero-inner-c">
  <div class="hero-label"><span class="hero-dot"></span>منصة تعليمية · موريتانيا</div>
  <h1>تعلّم التقنية<br>وابنِ مستقبلك</h1>
- <p>ستة مسارات تقنية احترافية بشرح عربي مفصّل وتطبيق عملي ومشروع حقيقي في نهاية كل مسار — تتعلّم بالوتيرة التي تناسبك.</p>
+ <p>ستة مسارات تقنية احترافية بأسلوب عملي مبسّط، ومشروع حقيقي تنشره في نهاية كل مسار، وشهادة إتمام — تتعلّم بالوتيرة التي تناسبك.</p>
  <div class="hero-nums">
  <div class="hn"><span class="hn-val">6</span><div class="hn-lab">مسارات</div></div>
  <div class="hn"><span class="hn-val">+40</span><div class="hn-lab">درساً</div></div>
- <div class="hn"><span class="hn-val">100%</span><div class="hn-lab">عربي وعملي</div></div>
+ <div class="hn"><span class="hn-val">6</span><div class="hn-lab">شهادات</div></div>
  </div>
  <div class="hero-actions">
  <a href="#about" class="btn-g">تعرّف على المنصة</a>
@@ -765,9 +927,9 @@ body.light{
      <p>منصة عربية تأخذ بيدك من الصفر حتى الاحتراف، بمحتوى عملي ومشاريع حقيقية.</p>
    </div>
    <div class="about-mini">
-     <div class="mini reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg><span>شرح عربي مفصّل من الصفر</span></div>
-     <div class="mini reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>مشروع حقيقي في كل مسار</span></div>
-     <div class="mini reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>تتعلّم بالوتيرة التي تناسبك</span></div>
+     <div class="mini reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg><span>من الصفر إلى الاحتراف عمليّاً</span></div>
+     <div class="mini reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>مشروع حقيقي تنشره بنفسك</span></div>
+     <div class="mini reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>وصول دائم بوتيرتك الخاصة</span></div>
      <div class="mini reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>شهادة ومرافقة بالذكاء الاصطناعي</span></div>
    </div>
  </div>
@@ -776,12 +938,12 @@ body.light{
  <div class="tracks-label">المسارات التعليمية</div>
 
  <div class="track-row t1 reveal" onclick="tryOpen('web')">
- <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=400&q=70" alt="" loading="lazy"></div>
+ <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=400&q=70" alt="" loading="lazy" decoding="async"></div>
  <div class="tr-body">
  <div class="tr-title">إنشاء المواقع الإلكترونية</div>
  <div class="tr-meta">
  <span class="tr-badge b1">مبتدئ</span>
- <span>8 دروس</span>
+ <span>10 دروس</span>
  </div>
  </div>
  <div class="tr-lock" id="lock-web" data-price="1000"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">1000 أوقية</span> <span class="old">2000</span></div>
@@ -789,12 +951,12 @@ body.light{
  </div>
 
  <div class="track-row t2 reveal" onclick="tryOpen('app')">
- <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=70" alt="" loading="lazy"></div>
+ <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=70" alt="" loading="lazy" decoding="async"></div>
  <div class="tr-body">
  <div class="tr-title">برمجة تطبيقات الهواتف</div>
  <div class="tr-meta">
  <span class="tr-badge b2">مبتدئ</span>
- <span>7 دروس</span>
+ <span>9 دروس</span>
  </div>
  </div>
  <div class="tr-lock" id="lock-app" data-price="1000"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">1000 أوقية</span> <span class="old">2000</span></div>
@@ -802,7 +964,7 @@ body.light{
  </div>
 
  <div class="track-row t3 reveal" onclick="tryOpen('cyber')">
- <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=70" alt="" loading="lazy"></div>
+ <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=70" alt="" loading="lazy" decoding="async"></div>
  <div class="tr-body">
  <div class="tr-title">الأمن السيبراني</div>
  <div class="tr-meta">
@@ -815,7 +977,7 @@ body.light{
  </div>
 
  <div class="track-row t4 reveal" onclick="tryOpen('ethical')">
- <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=70" alt="" loading="lazy"></div>
+ <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=70" alt="" loading="lazy" decoding="async"></div>
  <div class="tr-body">
  <div class="tr-title">الاختراق الأخلاقي</div>
  <div class="tr-meta">
@@ -828,12 +990,12 @@ body.light{
  </div>
 
  <div class="track-row t5 reveal" onclick="tryOpen('bots')">
- <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&q=70" alt="" loading="lazy"></div>
+ <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&q=70" alt="" loading="lazy" decoding="async"></div>
  <div class="tr-body">
  <div class="tr-title">صنع البوتات الذكية</div>
  <div class="tr-meta">
  <span class="tr-badge b5">مبتدئ</span>
- <span>7 دروس</span>
+ <span>8 دروس</span>
  </div>
  </div>
  <div class="tr-lock" id="lock-bots" data-price="890"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">890 أوقية</span> <span class="old">1500</span></div>
@@ -841,7 +1003,7 @@ body.light{
  </div>
 
  <div class="track-row t6 reveal" onclick="tryOpen('ai')">
- <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=70" alt="" loading="lazy"></div>
+ <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=70" alt="" loading="lazy" decoding="async"></div>
  <div class="tr-body">
  <div class="tr-title">أدوات الذكاء الاصطناعي</div>
  <div class="tr-meta">
@@ -863,19 +1025,9 @@ body.light{
       <a href="https://wa.me/22236521223" target="_blank" class="svc-btn">واتساب</a>
     </div>
     <div class="service-row">
-      <div class="svc-icon"><svg viewBox="0 0 24 24" stroke="#25d366" fill="none" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-      <div class="svc-body"><div class="svc-title">تواصل عبر واتساب</div><div class="svc-desc">للاستفسار عن الدورة أو الخدمات</div></div>
-      <a href="https://wa.me/22236521223" target="_blank" class="svc-btn svc-btn-wa">واتساب</a>
-    </div>
-    <div class="service-row">
       <div class="svc-icon"><svg viewBox="0 0 24 24" stroke="#f87171" fill="none" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
       <div class="svc-body"><div class="svc-title">أدوات الأمن السيبراني</div><div class="svc-desc">أدوات احترافية لاختبار الاختراق — قريباً في المتجر</div></div>
       <a href="https://wa.me/22236521223" target="_blank" class="svc-btn">قريباً</a>
-    </div>
-    <div class="service-row">
-      <div class="svc-icon"><svg viewBox="0 0 24 24" stroke="#f59e0b" fill="none" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-      <div class="svc-body"><div class="svc-title">الشهادة الختامية</div><div class="svc-desc">أكمل مسار وابنِ مشروعك — تواصل معنا للشهادة الرسمية</div></div>
-      <a href="https://wa.me/22236521223" target="_blank" class="svc-btn">طلب الشهادة</a>
     </div>
   </div>
 
@@ -916,13 +1068,13 @@ body.light{
  <button class="back-btn" onclick="goHome()">&#8594;</button>
  <div class="course-topbar-info">
  <div class="course-topbar-title">إنشاء المواقع الإلكترونية</div>
- <div class="course-topbar-sub">المسار الأول · 8 دروس</div>
+ <div class="course-topbar-sub">المسار الأول · 10 دروس</div>
  </div>
  </div>
 
  <div class="course-hero">
  <div class="course-eyebrow" style="color:#39d353">المسار الأول</div>
- <div class="course-banner"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=900&q=75" alt="" loading="lazy"></div>
+ <div class="course-banner"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=900&q=75" alt="" loading="lazy" decoding="async"></div>
  <div class="course-title">إنشاء المواقع الإلكترونية</div>
  <div class="course-desc">من الصفر إلى موقع حقيقي منشور على الإنترنت. ستتعلم HTML وCSS وJavaScript بأسلوب عملي مباشر.</div>
  <div class="course-tags">
@@ -933,7 +1085,7 @@ body.light{
  </div>
  <div class="course-info-row">
  <div class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> يومان</div>
- <div class="ci"><svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><polyline points="3 6 4 7 6 5"/></svg> 8 دروس</div>
+ <div class="ci"><svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><polyline points="3 6 4 7 6 5"/></svg> 10 دروس</div>
  <div class="ci"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> مشروع نهائي</div>
  </div>
  </div>
@@ -941,12 +1093,215 @@ body.light{
  <div class="lessons-sec">
  <div class="lessons-head">
  <h2>دروس المسار</h2>
- <span>8 دروس</span>
+ <span>10 دروس</span>
  </div>
 
  <div class="lesson-row" id="l-web-0">
  <div class="lesson-trigger" onclick="toggleL('web',0)">
  <div class="l-num">1</div>
+ <div class="l-info">
+ <div class="l-title">كيف يعمل الإنترنت والمواقع</div>
+ <div class="l-dur">25 دقيقة</div>
+ </div>
+ <div class="l-chev"></div>
+ </div>
+ <div class="lesson-panel">
+ <div class="lp-inner">
+<h3>الدرس الأول: كيف يعمل الإنترنت والمواقع</h3>
+<p>قبل أن تبني موقعك الأوّل، من المهمّ أن تفهم ما يحدث خلف الكواليس: الإنترنت، الخوادم، DNS، وبروتوكولا HTTP و HTTPS. هذا الفهم البسيط سيجعل كلّ ما يأتي بعده أوضح وأسهل.</p>
+<h4 class="step-h">ما هو الإنترنت؟</h4>
+<p>الإنترنت شبكة ضخمة من الحواسيب المتّصلة ببعضها حول العالم عبر كابلات وأسلاك وإشارات لاسلكية. تخيّل أنّ كلّ حاسوب منزل، والكابلات هي الطرق التي تربط هذه المنازل ببعضها.</p>
+<p>وعندما تكتب عنوان موقع في متصفّحك، يرسل جهازك طلباً عبر هذه الشبكة إلى حاسوب آخر في مكان ما في العالم يُسمّى <span class="term">الخادم (Server)</span>، فيردّ عليك ذلك الخادم بمحتوى الصفحة.</p>
+<hr class="lesson-hr">
+<h4 class="step-h">ما هو الموقع الإلكتروني؟</h4>
+<p>الموقع مجموعة ملفّات (HTML و CSS و JavaScript وصور...) مخزّنة على خادم متّصل بالإنترنت على مدار الساعة. وعندما يطلبه شخصٌ ما، يرسل الخادم هذه الملفّات إلى متصفّحه، فيعرضها المتصفّح صفحةً جميلة.</p>
+<div class="callout"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><div class="co-t"><strong>الفرق بين الموقع والتطبيق:</strong> الموقع ملفّات تُعرض داخل المتصفّح، أمّا التطبيق فيُحمَّل ويعمل على جهازك مباشرة. لكنّ الفرق بينهما بدأ يضيق كثيراً اليوم.</div></div>
+<hr class="lesson-hr">
+<h4 class="step-h">كيف يصل المتصفّح إلى الموقع؟ — رحلة الطلب</h4>
+<ul>
+<li><strong>تكتب العنوان في المتصفّح:</strong> مثل <code dir="ltr">google.com</code> — وهذا ما يُسمّى URL أو عنوان الموقع.</li>
+<li><strong>DNS يترجم الاسم إلى رقم IP:</strong> الحواسيب لا تفهم "google.com"، بل تفهم أرقاماً مثل <code dir="ltr">142.250.185.14</code>. الـ <span class="term">DNS</span> هو دليل الهاتف الذي يترجم الاسم إلى رقم.</li>
+<li><strong>المتصفّح يرسل طلب HTTP:</strong> يقول للخادم: "أعطني محتوى الصفحة الرئيسية من فضلك." ويُسمّى هذا الطلب HTTP Request.</li>
+<li><strong>الخادم يردّ بمحتوى الصفحة:</strong> يرسل ملفّ HTML وكلّ الملفّات المرتبطة به. ويُسمّى هذا الردّ HTTP Response.</li>
+<li><strong>المتصفّح يعرض الصفحة:</strong> يقرأ ملفّ HTML ويرسم الصفحة أمامك خلال ثوانٍ.</li>
+</ul>
+<hr class="lesson-hr">
+<h4 class="step-h">HTTP و HTTPS — ما الفرق؟</h4>
+<table class="md-table"><tr>
+              <th>البروتوكول</th>
+              <th>المعنى</th>
+              <th>الاستخدام</th>
+            </tr>
+            <tr>
+              <td>HTTP</td>
+              <td>HyperText Transfer Protocol</td>
+              <td>نقل البيانات بدون تشفير — غير آمن</td>
+            </tr>
+            <tr>
+              <td>HTTPS</td>
+              <td>HTTP + Secure</td>
+              <td>نفس الشيء لكن البيانات مشفّرة — آمن</td>
+            </tr></table>
+<p>اليوم كلّ المواقع الجادّة تستخدم <span class="term">HTTPS</span>. وإذا رأيت قفلاً صغيراً في شريط المتصفّح فهذا يعني أنّ الاتّصال مشفّر وآمن.</p>
+<hr class="lesson-hr">
+<h4 class="step-h">ما هو الخادم (Server)؟</h4>
+<p>الخادم حاسوبٌ عاديّ مثل حاسوبك تماماً، لكنّه يعمل ٢٤ ساعة ومتّصل بالإنترنت بسرعة عالية، ومهمّته أن يستقبل الطلبات ويرسل الردود. الفرق الوحيد أنّه لا يُغلق أبداً.</p>
+<p>شركات مثل <span class="term">Netlify</span> و <span class="term">Vercel</span> و <span class="term">GitHub Pages</span> توفّر لك هذه الخوادم بسعر رخيص أو مجّاناً لتنشر مواقعك عليها.</p>
+<hr class="lesson-hr">
+<h4 class="step-h">خلاصة الدرس</h4>
+<ul>
+<li>الإنترنت شبكة حواسيب متّصلة تتواصل عبر الكابلات والإشارات.</li>
+<li>الموقع ملفّات مخزّنة على خادمٍ يرسلها عند الطلب.</li>
+<li>DNS يترجم أسماء المواقع إلى أرقام IP يفهمها الحاسوب.</li>
+<li>HTTP لغة التواصل بين المتصفّح والخادم.</li>
+<li>HTTPS هو HTTP مع تشفير — أكثر أماناً.</li>
+</ul>
+<hr class="lesson-hr">
+<div class="l-nav">
+ 
+ <button class="l-btn l-btn-primary" onclick="nextL('web',0)">الدرس التالي </button>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="lesson-row" id="l-web-1">
+ <div class="lesson-trigger" onclick="toggleL('web',1)">
+ <div class="l-num">2</div>
+ <div class="l-info">
+ <div class="l-title">أساسيات HTML و CSS و JavaScript</div>
+ <div class="l-dur">30 دقيقة</div>
+ </div>
+ <div class="l-chev"></div>
+ </div>
+ <div class="lesson-panel">
+ <div class="lp-inner">
+<h3>الدرس الثاني: أساسيات HTML و CSS و JavaScript</h3>
+<p>هذه هي اللبنات الثلاث التي يُبنى منها كلّ موقع على الإنترنت. سنشرح كلّ واحدة منها شرحاً عمليّاً بالأمثلة حتى تفهم دورها بوضوح.</p>
+<h4 class="step-h">ثلاثة ملفّات تبني كلّ موقع</h4>
+<p>كلّ موقع تراه على الإنترنت مبنيّ من ثلاثة عناصر أساسية:</p>
+<table class="md-table"><tr>
+              <th>العنصر</th>
+              <th>المثال في الحياة</th>
+              <th>دوره في الموقع</th>
+            </tr>
+            <tr>
+              <td>HTML</td>
+              <td>هيكل البناء والجدران</td>
+              <td>يُحدّد المحتوى: نصوص، صور، روابط، أزرار</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>الدهان والديكور</td>
+              <td>يُحدّد الشكل: ألوان، خطوط، مسافات، تصميم</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>الكهرباء والحركة</td>
+              <td>يُضيف التفاعل: النقر، الحركة، الطلبات الديناميكية</td>
+            </tr></table>
+<hr class="lesson-hr">
+<h4 class="step-h">HTML — هيكل الصفحة</h4>
+<p><span class="term">HTML</span> لغة ترميز تستخدم <span class="term">وسوماً (Tags)</span> لتعريف المحتوى. لكلّ وسم فتحٌ وإغلاق، والمحتوى يوضع بينهما.</p>
+<div class="code-box"><div class="code-box-hd"><span class="lang">HTML</span></div><pre><span class="c-com">&lt;!-- هذا هيكل صفحة HTML بسيطة --&gt;</span>
+<span class="c-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="c-tag">&lt;html&gt;</span>
+  <span class="c-tag">&lt;head&gt;</span>
+    <span class="c-tag">&lt;title&gt;</span>اسم الموقع<span class="c-tag">&lt;/title&gt;</span>
+  <span class="c-tag">&lt;/head&gt;</span>
+  <span class="c-tag">&lt;body&gt;</span>
+
+    <span class="c-tag">&lt;h1&gt;</span>عنوان رئيسي<span class="c-tag">&lt;/h1&gt;</span>
+    <span class="c-tag">&lt;p&gt;</span>هذا نص عادي داخل فقرة.<span class="c-tag">&lt;/p&gt;</span>
+    <span class="c-tag">&lt;a</span> <span class="c-attr">href=</span><span class="c-val">"https://google.com"</span><span class="c-tag">&gt;</span>رابط لجوجل<span class="c-tag">&lt;/a&gt;</span>
+    <span class="c-tag">&lt;img</span> <span class="c-attr">src=</span><span class="c-val">"صورة.jpg"</span> <span class="c-attr">alt=</span><span class="c-val">"وصف الصورة"</span><span class="c-tag">&gt;</span>
+    <span class="c-tag">&lt;button&gt;</span>اضغط هنا<span class="c-tag">&lt;/button&gt;</span>
+
+  <span class="c-tag">&lt;/body&gt;</span>
+<span class="c-tag">&lt;/html&gt;</span></pre></div>
+<p>أكثر الوسوم استخداماً: <span class="term">h1–h6</span> للعناوين، و <span class="term">p</span> للفقرات، و <span class="term">div</span> لتجميع العناصر، و <span class="term">a</span> للروابط، و <span class="term">img</span> للصور، و <span class="term">button</span> للأزرار.</p>
+<hr class="lesson-hr">
+<h4 class="step-h">CSS — التصميم والمظهر</h4>
+<p><span class="term">CSS</span> تعمل بتحديد عنصر HTML ثمّ تعريف خصائص له. والصيغة دائماً: اسم العنصر، ثمّ قوسان معقوفان، ثمّ الخصائص بداخلهما.</p>
+<div class="code-box"><div class="code-box-hd"><span class="lang">CSS</span></div><pre><span class="c-com">/* تنسيق العنوان الرئيسي */</span>
+<span class="c-tag">h1</span> {
+  <span class="c-prop">color</span>: <span class="c-val">#00e676</span>;       <span class="c-com">/* لون النص */</span>
+  <span class="c-prop">font-size</span>: <span class="c-val">32px</span>;    <span class="c-com">/* حجم الخط */</span>
+  <span class="c-prop">font-weight</span>: <span class="c-val">bold</span>;   <span class="c-com">/* نص عريض */</span>
+  <span class="c-prop">text-align</span>: <span class="c-val">center</span>; <span class="c-com">/* توسيط */</span>
+}
+
+<span class="c-com">/* تنسيق زر */</span>
+<span class="c-tag">button</span> {
+  <span class="c-prop">background</span>: <span class="c-val">#00e676</span>;
+  <span class="c-prop">color</span>: <span class="c-val">#000</span>;
+  <span class="c-prop">padding</span>: <span class="c-val">12px 24px</span>;
+  <span class="c-prop">border</span>: <span class="c-val">none</span>;
+  <span class="c-prop">border-radius</span>: <span class="c-val">8px</span>;
+  <span class="c-prop">cursor</span>: <span class="c-val">pointer</span>;
+}</pre></div>
+<p>وتربط ملفّ CSS بصفحة HTML بوضع هذا السطر داخل <span class="term">&lt;head&gt;</span>:</p>
+<div class="code-box"><div class="code-box-hd"><span class="lang">HTML</span></div><pre><span class="c-tag">&lt;link</span> <span class="c-attr">rel=</span><span class="c-val">"stylesheet"</span> <span class="c-attr">href=</span><span class="c-val">"style.css"</span><span class="c-tag">&gt;</span></pre></div>
+<hr class="lesson-hr">
+<h4 class="step-h">JavaScript — التفاعل والحركة</h4>
+<p><span class="term">JavaScript</span> لغة برمجة حقيقية تعمل داخل المتصفّح. بها تغيّر الصفحة بعد تحميلها، وتتفاعل مع النقرات، وترسل طلبات للخادم دون إعادة تحميل الصفحة.</p>
+<div class="code-box"><div class="code-box-hd"><span class="lang">JavaScript</span></div><pre><span class="c-com">// عند النقر على الزر، يظهر رسالة</span>
+<span class="c-tag">document</span>.<span class="c-attr">querySelector</span>(<span class="c-val">'button'</span>)
+  .<span class="c-attr">addEventListener</span>(<span class="c-val">'click'</span>, <span class="c-tag">function</span>() {
+    <span class="c-attr">alert</span>(<span class="c-val">'مرحباً بك في موقعنا!'</span>);
+  });
+
+<span class="c-com">// تغيير نص عنصر</span>
+<span class="c-tag">document</span>.<span class="c-attr">querySelector</span>(<span class="c-val">'h1'</span>).<span class="c-prop">textContent</span> = <span class="c-val">'نص جديد'</span>;
+
+<span class="c-com">// إخفاء وإظهار عنصر</span>
+<span class="c-tag">document</span>.<span class="c-attr">querySelector</span>(<span class="c-val">'.menu'</span>).<span class="c-prop">style</span>.<span class="c-prop">display</span> = <span class="c-val">'none'</span>;</pre></div>
+<p>وتربط JavaScript بصفحتك عبر:</p>
+<div class="code-box"><div class="code-box-hd"><span class="lang">HTML</span></div><pre><span class="c-tag">&lt;script</span> <span class="c-attr">src=</span><span class="c-val">"script.js"</span><span class="c-tag">&gt;&lt;/script&gt;</span></pre></div>
+<hr class="lesson-hr">
+<h4 class="step-h">تطبيق عمليّ — صفحة كاملة بسيطة</h4>
+<p>إليك مثالاً حيّاً يجمع الثلاثة معاً في ملفّ واحد:</p>
+<div class="code-box"><div class="code-box-hd"><span class="lang">HTML</span></div><pre><span class="c-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="c-tag">&lt;html&gt;</span>
+<span class="c-tag">&lt;head&gt;</span>
+  <span class="c-tag">&lt;title&gt;</span>صفحتي الأولى<span class="c-tag">&lt;/title&gt;</span>
+  <span class="c-tag">&lt;style&gt;</span>
+    <span class="c-tag">body</span> { <span class="c-prop">background</span>: <span class="c-val">#111</span>; <span class="c-prop">color</span>: <span class="c-val">#fff</span>; <span class="c-prop">text-align</span>: <span class="c-val">center</span>; <span class="c-prop">padding</span>: <span class="c-val">40px</span>; }
+    <span class="c-tag">button</span> { <span class="c-prop">background</span>: <span class="c-val">#00e676</span>; <span class="c-prop">padding</span>: <span class="c-val">12px 28px</span>; <span class="c-prop">border</span>: <span class="c-val">none</span>; <span class="c-prop">border-radius</span>: <span class="c-val">8px</span>; <span class="c-prop">cursor</span>: <span class="c-val">pointer</span>; <span class="c-prop">font-size</span>: <span class="c-val">16px</span>; }
+  <span class="c-tag">&lt;/style&gt;</span>
+<span class="c-tag">&lt;/head&gt;</span>
+<span class="c-tag">&lt;body&gt;</span>
+  <span class="c-tag">&lt;h1</span> <span class="c-attr">id=</span><span class="c-val">"title"</span><span class="c-tag">&gt;</span>مرحباً بك<span class="c-tag">&lt;/h1&gt;</span>
+  <span class="c-tag">&lt;button</span> <span class="c-attr">onclick=</span><span class="c-val">"changeName()"</span><span class="c-tag">&gt;</span>غيّر العنوان<span class="c-tag">&lt;/button&gt;</span>
+  <span class="c-tag">&lt;script&gt;</span>
+    <span class="c-tag">function</span> <span class="c-attr">changeName</span>() {
+      <span class="c-tag">document</span>.<span class="c-attr">getElementById</span>(<span class="c-val">'title'</span>).<span class="c-prop">textContent</span> = <span class="c-val">'تم التغيير!'</span>;
+    }
+  <span class="c-tag">&lt;/script&gt;</span>
+<span class="c-tag">&lt;/body&gt;</span>
+<span class="c-tag">&lt;/html&gt;</span></pre></div>
+<div class="callout"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><div class="co-t">انسخ هذا الكود في ملفّ باسم <code dir="ltr">index.html</code> وافتحه في المتصفّح — ستحصل على صفحة تعمل فعليّاً على جهازك بدون إنترنت.</div></div>
+<hr class="lesson-hr">
+<h4 class="step-h">خلاصة الدرس</h4>
+<ul>
+<li>HTML يبني هيكل الصفحة بالوسوم مثل h1 و p و div و a.</li>
+<li>CSS يُنسّق الشكل: ألوان وخطوط ومسافات وحدود.</li>
+<li>JavaScript يُضيف التفاعل والحركة وتغيير المحتوى ديناميكيّاً.</li>
+<li>الثلاثة معاً يبنون أيّ موقع تراه على الإنترنت اليوم.</li>
+<li>يمكنك كتابة الثلاثة في ملفّ HTML واحد وفتحه في المتصفّح مباشرة.</li>
+</ul>
+<hr class="lesson-hr">
+<div class="l-nav">
+ <button class="l-btn l-btn-ghost" onclick="prevL('web',1)"> السابق</button>
+ <button class="l-btn l-btn-primary" onclick="nextL('web',1)">الدرس التالي </button>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="lesson-row" id="l-web-2">
+ <div class="lesson-trigger" onclick="toggleL('web',2)">
+ <div class="l-num">3</div>
  <div class="l-info">
  <div class="l-title">مدخل إلى بناء المواقع</div>
  <div class="l-dur">30 دقيقة</div>
@@ -1002,15 +1357,16 @@ body.light{
 <hr class="lesson-hr">
 <div class="l-nav">
  
- <button class="l-btn l-btn-primary" onclick="nextL('web',0)">الدرس التالي </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('web',2)"> السابق</button>
+  <button class="l-btn l-btn-primary" onclick="nextL('web',2)">الدرس التالي </button>
  </div>
  </div>
  </div>
  </div>
 
- <div class="lesson-row" id="l-web-1">
- <div class="lesson-trigger" onclick="toggleL('web',1)">
- <div class="l-num">2</div>
+ <div class="lesson-row" id="l-web-3">
+ <div class="lesson-trigger" onclick="toggleL('web',3)">
+ <div class="l-num">4</div>
  <div class="l-info">
  <div class="l-title">أساسيات HTML — هيكل الصفحة</div>
  <div class="l-dur">25 دقيقة</div>
@@ -1072,16 +1428,16 @@ body.light{
 <div class="callout"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg><div class="co-t"><strong>تحدّي هذا الدرس:</strong> اطلب من Claude أن يضيف لموقعك صفحة "عنّي" منفصلة، واربطها بشريط التنقّل.</div></div>
 <hr class="lesson-hr">
 <div class="l-nav">
- <button class="l-btn l-btn-ghost" onclick="prevL('web',1)"> السابق</button>
- <button class="l-btn l-btn-primary" onclick="nextL('web',1)">الدرس التالي </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('web',3)"> السابق</button>
+ <button class="l-btn l-btn-primary" onclick="nextL('web',3)">الدرس التالي </button>
  </div>
  </div>
  </div>
  </div>
 
- <div class="lesson-row" id="l-web-2">
- <div class="lesson-trigger" onclick="toggleL('web',2)">
- <div class="l-num">3</div>
+ <div class="lesson-row" id="l-web-4">
+ <div class="lesson-trigger" onclick="toggleL('web',4)">
+ <div class="l-num">5</div>
  <div class="l-info">
  <div class="l-title">التصميم بـ CSS</div>
  <div class="l-dur">30 دقيقة</div>
@@ -1144,16 +1500,16 @@ color: #333333;   /* رمادي داكن مريح للقراءة */</pre></div>
 <div class="callout"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg><div class="co-t"><strong>تحدّي هذا الدرس:</strong> أضِف تصميماً كاملاً لموقعك بلوحة ألوان متناسقة، وتأكّد أنّه جميل على هاتفك.</div></div>
 <hr class="lesson-hr">
 <div class="l-nav">
- <button class="l-btn l-btn-ghost" onclick="prevL('web',2)"> السابق</button>
- <button class="l-btn l-btn-primary" onclick="nextL('web',2)">الدرس التالي </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('web',4)"> السابق</button>
+ <button class="l-btn l-btn-primary" onclick="nextL('web',4)">الدرس التالي </button>
  </div>
  </div>
  </div>
  </div>
 
- <div class="lesson-row" id="l-web-3">
- <div class="lesson-trigger" onclick="toggleL('web',3)">
- <div class="l-num">4</div>
+ <div class="lesson-row" id="l-web-5">
+ <div class="lesson-trigger" onclick="toggleL('web',5)">
+ <div class="l-num">6</div>
  <div class="l-info">
  <div class="l-title">JavaScript والتفاعل</div>
  <div class="l-dur">35 دقيقة</div>
@@ -1196,16 +1552,16 @@ document.getElementById("myBtn").addEventListener("click", function() {
 <div class="callout"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg><div class="co-t"><strong>تحدّي هذا الدرس:</strong> أضِف لموقعك زرّ تبديل بين الوضع الفاتح والداكن، وجرّبه على هاتفك.</div></div>
 <hr class="lesson-hr">
 <div class="l-nav">
- <button class="l-btn l-btn-ghost" onclick="prevL('web',3)"> السابق</button>
- <button class="l-btn l-btn-primary" onclick="nextL('web',3)">الدرس التالي </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('web',5)"> السابق</button>
+ <button class="l-btn l-btn-primary" onclick="nextL('web',5)">الدرس التالي </button>
  </div>
  </div>
  </div>
  </div>
 
- <div class="lesson-row" id="l-web-4">
- <div class="lesson-trigger" onclick="toggleL('web',4)">
- <div class="l-num">5</div>
+ <div class="lesson-row" id="l-web-6">
+ <div class="lesson-trigger" onclick="toggleL('web',6)">
+ <div class="l-num">7</div>
  <div class="l-info">
  <div class="l-title">بناء مشروع حقيقي مع Claude</div>
  <div class="l-dur">40 دقيقة</div>
@@ -1247,16 +1603,16 @@ document.getElementById("myBtn").addEventListener("click", function() {
 <div class="callout"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg><div class="co-t"><strong>تحدّي هذا الدرس:</strong> ابنِ موقع أعمال (Portfolio) كاملاً بهذه المنهجية خطوة بخطوة مع Claude.</div></div>
 <hr class="lesson-hr">
 <div class="l-nav">
- <button class="l-btn l-btn-ghost" onclick="prevL('web',4)"> السابق</button>
- <button class="l-btn l-btn-primary" onclick="nextL('web',4)">الدرس التالي </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('web',6)"> السابق</button>
+ <button class="l-btn l-btn-primary" onclick="nextL('web',6)">الدرس التالي </button>
  </div>
  </div>
  </div>
  </div>
 
- <div class="lesson-row" id="l-web-5">
- <div class="lesson-trigger" onclick="toggleL('web',5)">
- <div class="l-num">6</div>
+ <div class="lesson-row" id="l-web-7">
+ <div class="lesson-trigger" onclick="toggleL('web',7)">
+ <div class="l-num">8</div>
  <div class="l-info">
  <div class="l-title">رفع موقعك على الإنترنت عبر GitHub</div>
  <div class="l-dur">25 دقيقة</div>
@@ -1361,16 +1717,16 @@ git push</pre></div>
 <div class="note">نصيحة: عندما يظهر لك خطأ، انسخه كاملاً والصقه لـ Claude وقل له "ساعدني أحل هذا الخطأ". هذا وحده يوفر عليك ساعات من البحث.</div>
 <hr class="lesson-hr">
  <div class="l-nav">
- <button class="l-btn l-btn-ghost" onclick="prevL('web',5)"> السابق</button>
- <button class="l-btn l-btn-primary" onclick="nextL('web',5)">الدرس التالي </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('web',7)"> السابق</button>
+ <button class="l-btn l-btn-primary" onclick="nextL('web',7)">الدرس التالي </button>
  </div>
  </div>
  </div>
  </div>
 
- <div class="lesson-row" id="l-web-6">
- <div class="lesson-trigger" onclick="toggleL('web',6)">
- <div class="l-num">7</div>
+ <div class="lesson-row" id="l-web-8">
+ <div class="lesson-trigger" onclick="toggleL('web',8)">
+ <div class="l-num">9</div>
  <div class="l-info">
  <div class="l-title">تطوير وتحسين موقعك</div>
  <div class="l-dur">20 دقيقة</div>
@@ -1420,16 +1776,16 @@ git push</pre></div>
 <hr class="lesson-hr">
 <hr class="lesson-hr">
  <div class="l-nav">
- <button class="l-btn l-btn-ghost" onclick="prevL('web',6)"> السابق</button>
- <button class="l-btn l-btn-primary" onclick="nextL('web',6)">الدرس التالي </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('web',8)"> السابق</button>
+ <button class="l-btn l-btn-primary" onclick="nextL('web',8)">الدرس التالي </button>
  </div>
  </div>
  </div>
  </div>
 
- <div class="lesson-row" id="l-web-7">
- <div class="lesson-trigger" onclick="toggleL('web',7)">
- <div class="l-num">8</div>
+ <div class="lesson-row" id="l-web-9">
+ <div class="lesson-trigger" onclick="toggleL('web',9)">
+ <div class="l-num">10</div>
  <div class="l-info">
  <div class="l-title">المشروع النهائي</div>
  <div class="l-dur">يومان</div>
@@ -1467,47 +1823,25 @@ git push</pre></div>
 <p><strong>مبروك على إتمام مسار إنشاء المواقع الإلكترونية! </strong></p>
 <hr class="lesson-hr">
  <div class="l-nav">
- <button class="l-btn l-btn-ghost" onclick="prevL('web',7)"> السابق</button>
- <button class="l-btn" style="background:#2ea043;color:#fff">اكتمل المسار </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('web',9)"> السابق</button>
+ <button class="l-btn" style="background:#2ea043;color:#fff" onclick="finishTrack('web',9)">اكتمل المسار </button>
  </div>
  </div>
  </div>
  </div>
  </div><!-- end lessons -->
 
- <!-- PROJECT -->
- <div class="project-wrap">
- <div class="proj-card">
- <div class="proj-head">
- <div class="proj-badge">المشروع النهائي</div>
- <h2>موقع شخصي احترافي</h2>
- <p>ستبني موقعاً شخصياً كاملاً يعرّف بك وبمهاراتك وتنشره على الإنترنت. هذا سيكون بطاقة تعريفك الرقمية.</p>
- </div>
- <div class="proj-tasks">
- <div class="pt-row">
- <div class="pt-check" onclick="toggleCheck(this)"></div>
- <div class="pt-text"><strong>صفحة رئيسية</strong><span>عنوان ترحيبي وصورة ووصف مختصر</span></div>
- </div>
- <div class="pt-row">
- <div class="pt-check" onclick="toggleCheck(this)"></div>
- <div class="pt-text"><strong>قسم المهارات</strong><span>عرض المهارات بطريقة بصرية</span></div>
- </div>
- <div class="pt-row">
- <div class="pt-check" onclick="toggleCheck(this)"></div>
- <div class="pt-text"><strong>قسم التواصل</strong><span>روابط التواصل الاجتماعي</span></div>
- </div>
- <div class="pt-row">
- <div class="pt-check" onclick="toggleCheck(this)"></div>
- <div class="pt-text"><strong>تصميم متجاوب</strong><span>يعمل على الهاتف والكمبيوتر</span></div>
- </div>
- <div class="pt-row">
- <div class="pt-check" onclick="toggleCheck(this)"></div>
- <div class="pt-text"><strong>نشر على GitHub Pages</strong><span>موقع حي على الإنترنت</span></div>
- </div>
- </div>
- </div>
- </div>
-
+   <div class="cert-trigger-wrap">
+    <button class="cert-trigger-btn" onclick="openCert('web')">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      استلام شهادة إتمام المسار
+    </button>
+    <div class="cert-trigger-note">
+      أكملت جميع الدروس وبنيت مشروعك النهائي؟ اضغط لعرض شهادتك<br>
+      للتحقق الرسمي تواصل عبر
+      <a href="https://wa.me/22236521223" target="_blank" style="color:var(--green)">واتساب</a>
+    </div>
+  </div>
  <div class="site-footer">مِهارة</div>
 </div>
 
@@ -1520,13 +1854,13 @@ git push</pre></div>
  <button class="back-btn" onclick="goHome()">&#8594;</button>
  <div class="course-topbar-info">
  <div class="course-topbar-title">برمجة تطبيقات الهواتف</div>
- <div class="course-topbar-sub">المسار الثاني · 7 دروس</div>
+ <div class="course-topbar-sub">المسار الثاني · 9 دروس</div>
  </div>
  </div>
 
  <div class="course-hero">
  <div class="course-eyebrow" style="color:#58a6ff">المسار الثاني</div>
- <div class="course-banner"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=75" alt="" loading="lazy"></div>
+ <div class="course-banner"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=75" alt="" loading="lazy" decoding="async"></div>
  <div class="course-title">برمجة تطبيقات الهواتف</div>
  <div class="course-desc">من الفكرة إلى تطبيق حقيقي منشور على المتاجر. ستتعلم React Native بمساعدة Claude خطوة بخطوة.</div>
  <div class="course-tags">
@@ -1536,7 +1870,7 @@ git push</pre></div>
  </div>
  <div class="course-info-row">
  <div class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> يومان</div>
- <div class="ci"><svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/></svg> 7 دروس</div>
+ <div class="ci"><svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/></svg> 9 دروس</div>
  <div class="ci"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> تطبيق حقيقي</div>
  </div>
  </div>
@@ -1544,12 +1878,326 @@ git push</pre></div>
  <div class="lessons-sec">
  <div class="lessons-head">
  <h2>دروس المسار</h2>
- <span>7 دروس</span>
+ <span>9 دروس</span>
  </div>
 
  <div class="lesson-row" id="l-app-0">
  <div class="lesson-trigger" onclick="toggleL('app',0)">
  <div class="l-num">1</div>
+ <div class="l-info">
+ <div class="l-title">كيف تعمل تطبيقات الهواتف؟</div>
+ <div class="l-dur">25 دقيقة</div>
+ </div>
+ <div class="l-chev"></div>
+ </div>
+ <div class="lesson-panel">
+ <div class="lp-inner">
+<h3>الدرس الأول: كيف تعمل تطبيقات الهواتف؟</h3>
+<p>Android وiOS، الفرق بين أنواع التطبيقات، وكيف يصل التطبيق إلى هاتفك</p>
+<hr class="lesson-hr">
+<h4 class="step-h">أولاً: هاتفك فيه نظامان مختلفان تماماً</h4>
+<p>
+          عندما نتحدث عن تطبيقات الهواتف، أول شيء يجب أن تعرفه هو أن هناك نظامَي تشغيل رئيسيَّين يعملان على هواتف اليوم:
+        </p>
+<table class="md-table">
+<tr>
+<th>النظام</th>
+<th>من يصنعه؟</th>
+<th>على أي هواتف؟</th>
+<th>لغة البرمجة الأصلية</th>
+</tr>
+<tr>
+<td>Android</td>
+<td>Google</td>
+<td>Samsung، Xiaomi، Huawei، وغيرها</td>
+<td>Kotlin أو Java</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>Apple</td>
+<td>iPhone فقط</td>
+<td>Swift أو Objective-C</td>
+</tr>
+</table>
+<p>
+          يعني إذا أردت قديماً أن تبني تطبيقاً يعمل على الاثنين، كان عليك تعلّم لغتين مختلفتين وكتابة الكود مرتين.
+          هذا كان مكلفاً ومتعباً — ولهذا ظهرت حلول جديدة سنتحدث عنها لاحقاً.
+        </p>
+<hr class="lesson-hr">
+<h4 class="step-h">ثانياً: ليست كل التطبيقات متشابهة</h4>
+<p>عندما تفتح هاتفك، التطبيقات التي تراها لا تعمل كلها بنفس الطريقة. هناك ثلاثة أنواع:</p>
+<ul><li><strong>التطبيق الأصلي (Native App):</strong> مبني خصيصاً لنظام معين بلغته الأصلية. مثلاً تطبيق الكاميرا في iPhone مبني بـ Swift لنظام iOS فقط.
+                هذا النوع أسرع وأكثر سلاسة لأنه يتواصل مباشرة مع نظام الهاتف بدون وسيط.</li><li><strong>تطبيق الويب (Web App):</strong> ليس تطبيقاً حقيقياً في الأصل — هو موقع إلكتروني تفتحه من المتصفح لكنه يبدو كتطبيق.
+                مثال: لو فتحت Twitter من Chrome بدل تطبيقه، هذا تطبيق ويب.
+                ميزته: تكتبه مرة واحدة ويعمل على كل شيء. عيبه: لا يصل لكل ميزات الهاتف مثل البلوتوث أو الكاميرا بشكل كامل.</li><li><strong>التطبيق الهجين (Cross-Platform App):</strong> الحل الوسط الذكي. تكتب الكود مرة واحدة وينتج تطبيقَين: واحد لـ Android وواحد لـ iOS.
+                هذا ما تفعله Flutter وReact Native. وهذا ما ستتعلمه في هذا المسار.</li></ul>
+<div class="callout"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><div class="co-t">معظم التطبيقات الكبيرة اليوم مثل Airbnb وFacebook وAlibaba تستخدم تطبيقات هجينة لتوفير الوقت والمال. الجودة أصبحت قريبة جداً من التطبيقات الأصلية.</div></div>
+<hr class="lesson-hr">
+<h4 class="step-h">ثالثاً: كيف يصل التطبيق إلى هاتفك؟</h4>
+<p>
+          عندما تبني تطبيقاً، لا يمكنك إرساله مباشرة للناس كملف. هناك رحلة يمر بها التطبيق قبل أن يصل لهاتف المستخدم:
+        </p>
+<ul><li><strong>المطوّر يكتب الكود:</strong> تكتب الكود على حاسوبك باستخدام محرر نصوص خاص يُسمى IDE مثل Android Studio أو VS Code.</li><li><strong>البناء والتحويل (Build):</strong> الحاسوب يحوّل الكود الذي كتبته إلى ملف تطبيق. في Android يكون الملف بصيغة APK وفي iOS يكون IPA.</li><li><strong>الرفع إلى المتجر:</strong> ترفع الملف إلى Google Play Store لـ Android أو App Store لـ iOS. يراجعه فريق المتجر أولاً قبل النشر.</li><li><strong>المستخدم يحمّله:</strong> يبحث عن التطبيق في المتجر، يضغط تثبيت، والمتجر يرسله إلى هاتفه.</li></ul>
+<hr class="lesson-hr">
+<h4 class="step-h">رابعاً: ما الذي يستطيع التطبيق الوصول إليه في هاتفك؟</h4>
+<p>
+          التطبيق ليس مجرد شاشة — يمكنه التواصل مع أجزاء هاتفك المختلفة.
+          هذه الأجزاء تُسمى <span class="term-blue">APIs الهاتف</span>، ومنها:
+        </p>
+<table class="md-table">
+<tr>
+<th>الميزة</th>
+<th>مثال على استخدامها</th>
+</tr>
+<tr>
+<td>الكاميرا</td>
+<td>تطبيق Instagram يلتقط صورك</td>
+</tr>
+<tr>
+<td>GPS والموقع</td>
+<td>Uber يعرف أين أنت</td>
+</tr>
+<tr>
+<td>الإشعارات</td>
+<td>WhatsApp يرسل لك تنبيهاً برسالة جديدة</td>
+</tr>
+<tr>
+<td>الميكروفون</td>
+<td>تطبيق المكالمات يسمع صوتك</td>
+</tr>
+<tr>
+<td>التخزين</td>
+<td>تطبيق الموسيقى يحفظ الأغاني</td>
+</tr>
+<tr>
+<td>البلوتوث</td>
+<td>تطبيق السماعات يتصل بسماعتك</td>
+</tr>
+</table>
+<p>
+          كل هذه الميزات تحتاج إذن من المستخدم — لهذا عندما تثبت تطبيقاً جديداً يسألك "هل تسمح للتطبيق بالوصول إلى الكاميرا؟".
+        </p>
+<hr class="lesson-hr">
+<h4 class="step-h">خلاصة الدرس</h4><ul>
+<li>هناك نظامان رئيسيان: Android من Google وiOS من Apple، ولكل منهما لغته الأصلية</li>
+<li>التطبيقات ثلاثة أنواع: أصلية، ويب، وهجينة — والهجينة هي ما ستتعلمه</li>
+<li>التطبيق الهجين يُكتب مرة واحدة ويعمل على Android وiOS معاً</li>
+<li>التطبيق يمر بمراحل: كتابة الكود، بناء الملف، رفعه للمتجر، ثم تحميله من المستخدم</li>
+<li>التطبيق يمكنه الوصول لكاميرا الهاتف وموقعه وإشعاراته وغيرها بإذن من المستخدم</li>
+</ul>
+<hr class="lesson-hr">
+<div class="l-nav"><button class="l-btn l-btn-primary" onclick="nextL('app',0)">الدرس التالي </button></div>
+ </div>
+ </div>
+ </div>
+
+ <div class="lesson-row" id="l-app-1">
+ <div class="lesson-trigger" onclick="toggleL('app',1)">
+ <div class="l-num">2</div>
+ <div class="l-info">
+ <div class="l-title">Flutter أم React Native؟ — دليل الاختيار الكامل</div>
+ <div class="l-dur">30 دقيقة</div>
+ </div>
+ <div class="l-chev"></div>
+ </div>
+ <div class="lesson-panel">
+ <div class="lp-inner">
+<h3>الدرس الثاني: Flutter أم React Native؟ — دليل الاختيار الكامل</h3>
+<p>شرح كل منهما من الصفر، مقارنة شاملة، وكيف تقرر أيهما تتعلم</p>
+<hr class="lesson-hr">
+<h4 class="step-h">أولاً: ما المشكلة التي حلّاها؟</h4>
+<p>
+          كما تعلمت في الدرس الأول، بناء تطبيق لـ Android وiOS قديماً كان يعني كتابة كودَين كاملَين بلغتَين مختلفتَين.
+          هذا يعني ضعف العمل وضعف التكلفة.
+        </p>
+<p>
+          الحل الذكي الذي ظهر هو: <span class="term-purple">إطار عمل واحد</span> تكتب فيه كودك مرة واحدة، وهو يتولى تحويله إلى تطبيق يعمل على الجهازَين.
+          هذا بالضبط ما يفعله Flutter وReact Native.
+        </p>
+<div class="callout"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><div class="co-t">تخيّل أنك تكتب رسالة بالعربية، ثم يأتي مترجم ذكي ويترجمها للإنجليزية والفرنسية تلقائياً. Flutter وReact Native يفعلان نفس الشيء مع كودك.</div></div>
+<hr class="lesson-hr">
+<h4 class="step-h">ثانياً: ما هو Flutter؟ — شرح من الصفر</h4>
+<p>
+<span class="term-purple">Flutter</span> هو إطار عمل صنعته شركة Google عام 2018.
+          تكتب فيه بلغة اسمها <span class="term-purple">Dart</span> — لغة صنعتها Google أيضاً، مصممة لتكون سهلة وسريعة.
+        </p>
+<p>
+          الفكرة الذكية في Flutter هي أنه لا يستخدم أزرار وعناصر Android أو iPhone الأصلية.
+          بدلاً من ذلك، يرسم كل شيء بنفسه كأنه لعبة فيديو. يعني هو يتحكم في كل بكسل تراه على الشاشة.
+        </p>
+<p><strong style="color:#fff;">كيف يبدو كود Flutter؟</strong></p>
+<div class="code-box"><div class="code-box-hd"><span class="lang">Dart</span></div><pre><span class="c-com">// مثال بسيط: شاشة تعرض نص وزر</span>
+
+<span class="c-kw">import</span> <span class="c-str">'package:flutter/material.dart'</span>;
+
+<span class="c-kw">void</span> <span class="c-fn">main</span>() {
+  <span class="c-fn">runApp</span>(<span class="c-widget">MyApp</span>());
+}
+
+<span class="c-kw">class</span> <span class="c-type">MyApp</span> <span class="c-kw">extends</span> <span class="c-type">StatelessWidget</span> {
+  <span class="c-fn">@override</span>
+  <span class="c-type">Widget</span> <span class="c-fn">build</span>(<span class="c-type">BuildContext</span> context) {
+    <span class="c-kw">return</span> <span class="c-widget">MaterialApp</span>(
+      home: <span class="c-widget">Scaffold</span>(
+        body: <span class="c-widget">Center</span>(
+          child: <span class="c-widget">Column</span>(
+            children: [
+              <span class="c-widget">Text</span>(<span class="c-str">'مرحباً بك في تطبيقي'</span>),
+              <span class="c-widget">ElevatedButton</span>(
+                onPressed: () {},
+                child: <span class="c-widget">Text</span>(<span class="c-str">'اضغط هنا'</span>),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}</pre></div>
+<p>
+          لاحظ كلمة <span class="term-purple">Widget</span> — هذا هو القلب في Flutter.
+          كل شيء في Flutter يُسمى Widget: النص widget، الزر widget، حتى الصفحة الكاملة widget.
+          تبني التطبيق بتركيب هذه الـ Widgets فوق بعضها مثل مكعبات Lego.
+        </p>
+<hr class="lesson-hr">
+<h4 class="step-h">ثالثاً: ما هو React Native؟ — شرح من الصفر</h4>
+<p>
+<span class="term-purple">React Native</span> هو إطار عمل صنعته شركة Facebook (Meta) عام 2015.
+          تكتب فيه بلغة <span class="term-purple">JavaScript</span> — نفس اللغة المستخدمة في مواقع الإنترنت التي درستها في مسار المواقع.
+        </p>
+<p>
+          الفكرة مختلفة عن Flutter. React Native لا يرسم الشاشة بنفسه — بل يقول لنظام الهاتف:
+          "أنا أريد زراً هنا ونصاً هنا" والنظام يرسم زره الأصلي هو. يعني المستخدم يرى عناصر تبدو وكأنها مبنية لنظامه تحديداً.
+        </p>
+<p><strong style="color:#fff;">كيف يبدو كود React Native؟</strong></p>
+<div class="code-box"><div class="code-box-hd"><span class="lang">JavaScript</span></div><pre><span class="c-com">// مثال بسيط: شاشة تعرض نص وزر</span>
+
+<span class="c-kw">import</span> React <span class="c-kw">from</span> <span class="c-str">'react'</span>;
+<span class="c-kw">import</span> { <span class="c-type">View</span>, <span class="c-type">Text</span>, <span class="c-type">Button</span> } <span class="c-kw">from</span> <span class="c-str">'react-native'</span>;
+
+<span class="c-kw">export default function</span> <span class="c-fn">App</span>() {
+  <span class="c-kw">return</span> (
+    &lt;<span class="c-widget">View</span>&gt;
+      &lt;<span class="c-widget">Text</span>&gt;مرحباً بك في تطبيقي&lt;/<span class="c-widget">Text</span>&gt;
+      &lt;<span class="c-widget">Button</span>
+        title=<span class="c-str">"اضغط هنا"</span>
+        onPress={() =&gt; {}}
+      /&gt;
+    &lt;/<span class="c-widget">View</span>&gt;
+  );
+}</pre></div>
+<p>
+          لاحظ أن الكود يشبه HTML كثيراً — هذا ليس صدفة. React Native مصمم ليكون مريحاً لمن يعرف تطوير مواقع الإنترنت.
+          إذا تعلمت مسار المواقع أولاً، React Native سيكون أسهل عليك بكثير.
+        </p>
+<hr class="lesson-hr">
+<h4 class="step-h">رابعاً: المقارنة الكاملة بينهما</h4>
+<div class="compare-grid">
+<div class="compare-card flutter">
+<h4>Flutter</h4>
+<ul>
+<li>لغة Dart — مصممة خصيصاً للتطبيقات، سهلة التعلم</li>
+<li>يرسم كل شيء بنفسه — التطبيق يبدو متطابقاً على كل الهواتف</li>
+<li>أداء سريع جداً لأنه لا يحتاج وسيط</li>
+<li>مكتبة Widgets ضخمة جاهزة للاستخدام مباشرة</li>
+<li>يدعم أيضاً الويب وDesktop بنفس الكود</li>
+<li>من الصعب بناء تطبيق يبدو "أصلياً" تماماً لكل نظام</li>
+</ul>
+</div>
+<div class="compare-card react">
+<h4>React Native</h4>
+<ul>
+<li>لغة JavaScript — نفس لغة مواقع الإنترنت، مجتمع ضخم</li>
+<li>يستخدم عناصر النظام الأصلية — الزر في iOS يبدو كزر iOS</li>
+<li>سهل التعلم إذا كنت تعرف React للويب</li>
+<li>مجتمع أكبر وأقدم، مكتبات أكثر</li>
+<li>بعض الميزات تحتاج كوداً أصلياً إضافياً</li>
+<li>الأداء أبطأ قليلاً في التطبيقات الثقيلة</li>
+</ul>
+</div>
+</div>
+<table class="md-table">
+<tr>
+<th>المعيار</th>
+<th>Flutter</th>
+<th>React Native</th>
+</tr>
+<tr>
+<td>اللغة</td>
+<td>Dart</td>
+<td>JavaScript</td>
+</tr>
+<tr>
+<td>الصانع</td>
+<td>Google</td>
+<td>Meta (Facebook)</td>
+</tr>
+<tr>
+<td>سنة الإصدار</td>
+<td>2018</td>
+<td>2015</td>
+</tr>
+<tr>
+<td>الأداء</td>
+<td>ممتاز جداً</td>
+<td>جيد جداً</td>
+</tr>
+<tr>
+<td>سهولة التعلم للمبتدئ</td>
+<td>سهل — Dart بسيطة</td>
+<td>سهل إذا عرفت JavaScript</td>
+</tr>
+<tr>
+<td>الشركات التي تستخدمه</td>
+<td>Alibaba، BMW، eBay</td>
+<td>Facebook، Instagram، Airbnb</td>
+</tr>
+<tr>
+<td>الطلب في سوق العمل</td>
+<td>يرتفع بسرعة</td>
+<td>مستقر وعالٍ</td>
+</tr>
+</table>
+<hr class="lesson-hr">
+<h4 class="step-h">خامساً: أيهما تختار؟ — القرار النهائي</h4>
+<div class="verdict-box">
+<h4>اختر بناءً على وضعك:</h4>
+<div class="verdict-row">
+<div class="verdict-label fl">Flutter</div>
+<p>إذا كنت مبتدئاً تماماً ولا تعرف أي لغة برمجة — Flutter أسهل للبداية لأن Dart لغة نظيفة ومبسّطة وستتعلمها من الصفر بدون عادات قديمة.</p>
+</div>
+<div class="verdict-row">
+<div class="verdict-label rn">React Native</div>
+<p>إذا أتممت مسار المواقع وتعرف JavaScript — React Native الخيار الطبيعي لك، ستتعلمه بنصف الوقت لأن 60% منه مألوف لديك.</p>
+</div>
+<div class="verdict-row">
+<div class="verdict-label fl">Flutter</div>
+<p>إذا هدفك بناء تطبيق بتصميم مخصص جميل ومتطابق على كل الهواتف — Flutter يمنحك تحكماً كاملاً في كل بكسل.</p>
+</div>
+<div class="verdict-row">
+<div class="verdict-label rn">React Native</div>
+<p>إذا تريد الاستفادة من مكتبات ويب موجودة وتريد العمل مع فرق تطوير كبيرة — React Native مجتمعه أضخم وأكثر مكتبات.</p>
+</div>
+</div>
+<div class="callout"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><div class="co-t">الحقيقة المهمة: الاثنان ممتازان ومطلوبان في سوق العمل. القرار ليس بين جيد وسيئ — بل بين أيهما يناسب خلفيتك وهدفك أكثر. اختر وابدأ، لا تنتظر كثيراً.</div></div>
+<hr class="lesson-hr">
+<h4 class="step-h">خلاصة الدرس</h4><ul>
+<li>Flutter وReact Native كلاهما يحلّان نفس المشكلة: كتابة تطبيق يعمل على Android وiOS بكود واحد</li>
+<li>Flutter يستخدم لغة Dart ويرسم كل شيء بنفسه — ممتاز للتصاميم المخصصة</li>
+<li>React Native يستخدم JavaScript ويعتمد على عناصر النظام الأصلية — ممتاز لمن يعرف الويب</li>
+<li>في Flutter كل شيء Widget — تبني التطبيق بتركيب Widgets فوق بعضها</li>
+<li>في React Native الكود يشبه HTML — مريح لمطوري المواقع</li>
+<li>إذا كنت مبتدئاً: Flutter. إذا تعرف JavaScript: React Native</li>
+</ul>
+<hr class="lesson-hr">
+<div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('app',1)"> السابق</button><button class="l-btn l-btn-primary" onclick="nextL('app',1)">الدرس التالي </button></div>
+ </div>
+ </div>
+ </div>
+
+ <div class="lesson-row" id="l-app-2">
+ <div class="lesson-trigger" onclick="toggleL('app',2)">
+ <div class="l-num">3</div>
  <div class="l-info">
  <div class="l-title">ما هو تطبيق الهاتف وكيف يُبنى؟</div>
  <div class="l-dur">25 دقيقة</div>
@@ -1604,15 +2252,15 @@ git push</pre></div>
 <hr class="lesson-hr">
  <div class="l-nav">
  
- <button class="l-btn l-btn-primary" onclick="nextL('app',0)">الدرس التالي </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('app',2)"> السابق</button><button class="l-btn l-btn-primary" onclick="nextL('app',2)">الدرس التالي </button>
  </div>
  </div>
  </div>
  </div>
 
- <div class="lesson-row" id="l-app-1">
- <div class="lesson-trigger" onclick="toggleL('app',1)">
- <div class="l-num">2</div>
+ <div class="lesson-row" id="l-app-3">
+ <div class="lesson-trigger" onclick="toggleL('app',3)">
+ <div class="l-num">4</div>
  <div class="l-info">
  <div class="l-title">أساسيات React Native</div>
  <div class="l-dur">30 دقيقة</div>
@@ -1676,16 +2324,16 @@ git push</pre></div>
 <hr class="lesson-hr">
 <hr class="lesson-hr">
  <div class="l-nav">
- <button class="l-btn l-btn-ghost" onclick="prevL('app',1)"> السابق</button>
- <button class="l-btn l-btn-primary" onclick="nextL('app',1)">الدرس التالي </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('app',3)"> السابق</button>
+ <button class="l-btn l-btn-primary" onclick="nextL('app',3)">الدرس التالي </button>
  </div>
  </div>
  </div>
  </div>
 
- <div class="lesson-row" id="l-app-2">
- <div class="lesson-trigger" onclick="toggleL('app',2)">
- <div class="l-num">3</div>
+ <div class="lesson-row" id="l-app-4">
+ <div class="lesson-trigger" onclick="toggleL('app',4)">
+ <div class="l-num">5</div>
  <div class="l-info">
  <div class="l-title">الشاشات والتنقل بينها</div>
  <div class="l-dur">30 دقيقة</div>
@@ -1723,16 +2371,16 @@ git push</pre></div>
 <hr class="lesson-hr">
 <hr class="lesson-hr">
  <div class="l-nav">
- <button class="l-btn l-btn-ghost" onclick="prevL('app',2)"> السابق</button>
- <button class="l-btn l-btn-primary" onclick="nextL('app',2)">الدرس التالي </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('app',4)"> السابق</button>
+ <button class="l-btn l-btn-primary" onclick="nextL('app',4)">الدرس التالي </button>
  </div>
  </div>
  </div>
  </div>
 
- <div class="lesson-row" id="l-app-3">
- <div class="lesson-trigger" onclick="toggleL('app',3)">
- <div class="l-num">4</div>
+ <div class="lesson-row" id="l-app-5">
+ <div class="lesson-trigger" onclick="toggleL('app',5)">
+ <div class="l-num">6</div>
  <div class="l-info">
  <div class="l-title">التعامل مع البيانات وحفظها</div>
  <div class="l-dur">25 دقيقة</div>
@@ -1787,16 +2435,16 @@ git push</pre></div>
 <hr class="lesson-hr">
 <hr class="lesson-hr">
  <div class="l-nav">
- <button class="l-btn l-btn-ghost" onclick="prevL('app',3)"> السابق</button>
- <button class="l-btn l-btn-primary" onclick="nextL('app',3)">الدرس التالي </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('app',5)"> السابق</button>
+ <button class="l-btn l-btn-primary" onclick="nextL('app',5)">الدرس التالي </button>
  </div>
  </div>
  </div>
  </div>
 
- <div class="lesson-row" id="l-app-4">
- <div class="lesson-trigger" onclick="toggleL('app',4)">
- <div class="l-num">5</div>
+ <div class="lesson-row" id="l-app-6">
+ <div class="lesson-trigger" onclick="toggleL('app',6)">
+ <div class="l-num">7</div>
  <div class="l-info">
  <div class="l-title">الكاميرا والإشعارات وميزات الهاتف</div>
  <div class="l-dur">30 دقيقة</div>
@@ -1850,16 +2498,16 @@ git push</pre></div>
 <hr class="lesson-hr">
 <hr class="lesson-hr">
  <div class="l-nav">
- <button class="l-btn l-btn-ghost" onclick="prevL('app',4)"> السابق</button>
- <button class="l-btn l-btn-primary" onclick="nextL('app',4)">الدرس التالي </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('app',6)"> السابق</button>
+ <button class="l-btn l-btn-primary" onclick="nextL('app',6)">الدرس التالي </button>
  </div>
  </div>
  </div>
  </div>
 
- <div class="lesson-row" id="l-app-5">
- <div class="lesson-trigger" onclick="toggleL('app',5)">
- <div class="l-num">6</div>
+ <div class="lesson-row" id="l-app-7">
+ <div class="lesson-trigger" onclick="toggleL('app',7)">
+ <div class="l-num">8</div>
  <div class="l-info">
  <div class="l-title">بناء تطبيق حقيقي كامل</div>
  <div class="l-dur">45 دقيقة</div>
@@ -1926,16 +2574,16 @@ git push</pre></div>
 <hr class="lesson-hr">
 <hr class="lesson-hr">
  <div class="l-nav">
- <button class="l-btn l-btn-ghost" onclick="prevL('app',5)"> السابق</button>
- <button class="l-btn l-btn-primary" onclick="nextL('app',5)">الدرس التالي </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('app',7)"> السابق</button>
+ <button class="l-btn l-btn-primary" onclick="nextL('app',7)">الدرس التالي </button>
  </div>
  </div>
  </div>
  </div>
 
- <div class="lesson-row" id="l-app-6">
- <div class="lesson-trigger" onclick="toggleL('app',6)">
- <div class="l-num">7</div>
+ <div class="lesson-row" id="l-app-8">
+ <div class="lesson-trigger" onclick="toggleL('app',8)">
+ <div class="l-num">9</div>
  <div class="l-info">
  <div class="l-title">نشر تطبيقك على المتاجر</div>
  <div class="l-dur">30 دقيقة</div>
@@ -2011,8 +2659,8 @@ git push</pre></div>
 <p><strong>الآن أنت مطور تطبيقات حقيقي!</strong></p>
 <hr class="lesson-hr">
  <div class="l-nav">
- <button class="l-btn l-btn-ghost" onclick="prevL('app',6)"> السابق</button>
- <button class="l-btn" style="background:#2ea043;color:#fff">اكتمل المسار </button>
+ <button class="l-btn l-btn-ghost" onclick="prevL('app',8)"> السابق</button>
+ <button class="l-btn" style="background:#2ea043;color:#fff" onclick="finishTrack('app',8)">اكتمل المسار </button>
  </div>
  </div>
  </div>
@@ -2020,6 +2668,18 @@ git push</pre></div>
 
  </div>
 
+
+  <div class="cert-trigger-wrap">
+    <button class="cert-trigger-btn" onclick="openCert('app')">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      استلام شهادة إتمام المسار
+    </button>
+    <div class="cert-trigger-note">
+      أكملت جميع الدروس وبنيت مشروعك النهائي؟ اضغط لعرض شهادتك<br>
+      للتحقق الرسمي تواصل عبر
+      <a href="https://wa.me/22236521223" target="_blank" style="color:var(--green)">واتساب</a>
+    </div>
+  </div>
  <div class="site-footer">مِهارة</div>
 </div>
 
@@ -2036,7 +2696,7 @@ git push</pre></div>
 
  <div class="course-hero">
  <div class="course-eyebrow" style="color:#f87171">المسار الثالث</div>
- <div class="course-banner"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900&q=75" alt="" loading="lazy"></div>
+ <div class="course-banner"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900&q=75" alt="" loading="lazy" decoding="async"></div>
  <div class="course-title">الأمن السيبراني</div>
  <div class="course-desc">من فهم الشبكات إلى استخدام أدوات الأمن الاحترافية. كل شيء بالعربية مع توجيه Claude في كل خطوة.</div>
  <div class="course-tags">
@@ -2895,7 +3555,7 @@ sudo fail2ban-client status ssh</pre></div>
 <hr class="lesson-hr">
  <div class="l-nav">
  <button class="l-btn l-btn-ghost" onclick="prevL('cyber',6)"> السابق</button>
- <button class="l-btn" style="background:#2ea043;color:#fff">اكتمل المسار </button>
+ <button class="l-btn" style="background:#2ea043;color:#fff" onclick="finishTrack('cyber',6)">اكتمل المسار </button>
  </div>
  </div>
  </div>
@@ -2903,6 +3563,18 @@ sudo fail2ban-client status ssh</pre></div>
 
  </div>
 
+
+  <div class="cert-trigger-wrap">
+    <button class="cert-trigger-btn" onclick="openCert('cyber')">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      استلام شهادة إتمام المسار
+    </button>
+    <div class="cert-trigger-note">
+      أكملت جميع الدروس وبنيت مشروعك النهائي؟ اضغط لعرض شهادتك<br>
+      للتحقق الرسمي تواصل عبر
+      <a href="https://wa.me/22236521223" target="_blank" style="color:var(--green)">واتساب</a>
+    </div>
+  </div>
  <div class="site-footer">مِهارة</div>
 </div>
 
@@ -2916,7 +3588,7 @@ sudo fail2ban-client status ssh</pre></div>
   </div>
   <div class="course-hero">
     <div class="course-eyebrow" style="color:#fbbf24">المسار الرابع</div>
- <div class="course-banner"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=75" alt="" loading="lazy"></div>
+ <div class="course-banner"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=75" alt="" loading="lazy" decoding="async"></div>
     <div class="course-title">الاختراق الأخلاقي</div>
     <div class="course-desc">منهجية اختبار الاختراق الاحترافية من الصفر — جمع المعلومات، استغلال الثغرات، تأمين الشبكات، وكتابة التقارير.</div>
     <div class="course-tags">
@@ -3815,7 +4487,7 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
 </ul>
 <p>قيّم إجابتي بالتفصيل وأخبرني مستوى جاهزيتي لتقديم خدمات اختبار اختراق حقيقية.&quot;</p>
 <hr class="lesson-hr">
-          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('ethical',5)">→ السابق</button><button class="l-btn" style="background:#2ea043;color:#fff">اكتمل المسار</button></div>
+          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('ethical',5)">→ السابق</button><button class="l-btn" style="background:#2ea043;color:#fff" onclick="finishTrack('ethical',5)">اكتمل المسار</button></div>
         </div>
       </div>
     </div>
@@ -3823,7 +4495,7 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
   </div>
 
   <div class="cert-trigger-wrap">
-    <button class="cert-trigger-btn" onclick="openCert('إنشاء المواقع الإلكترونية')">
+    <button class="cert-trigger-btn" onclick="openCert('ethical')">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
       استلام شهادة إتمام المسار
     </button>
@@ -3831,95 +4503,11 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
       أكملت جميع الدروس وبنيت مشروعك النهائي؟ اضغط لعرض شهادتك<br>
       للتحقق الرسمي تواصل عبر
       <a href="https://wa.me/22236521223" target="_blank" style="color:var(--green)">واتساب</a>
-      أو
-      <a href="https://wa.me/22236521223" target="_blank" style="color:#25d366">واتساب</a>
-    </div>
-  </div>
-
-  <div class="cert-trigger-wrap">
-    <button class="cert-trigger-btn" onclick="openCert('برمجة تطبيقات الهواتف')">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      استلام شهادة إتمام المسار
-    </button>
-    <div class="cert-trigger-note">
-      أكملت جميع الدروس وبنيت مشروعك النهائي؟ اضغط لعرض شهادتك<br>
-      للتحقق الرسمي تواصل عبر
-      <a href="https://wa.me/22236521223" target="_blank" style="color:var(--green)">واتساب</a>
-      أو
-      <a href="https://wa.me/22236521223" target="_blank" style="color:#25d366">واتساب</a>
-    </div>
-  </div>
-
-  <div class="cert-trigger-wrap">
-    <button class="cert-trigger-btn" onclick="openCert('الأمن السيبراني')">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      استلام شهادة إتمام المسار
-    </button>
-    <div class="cert-trigger-note">
-      أكملت جميع الدروس وبنيت مشروعك النهائي؟ اضغط لعرض شهادتك<br>
-      للتحقق الرسمي تواصل عبر
-      <a href="https://wa.me/22236521223" target="_blank" style="color:var(--green)">واتساب</a>
-      أو
-      <a href="https://wa.me/22236521223" target="_blank" style="color:#25d366">واتساب</a>
-    </div>
-  </div>
-
-  <div class="cert-trigger-wrap">
-    <button class="cert-trigger-btn" onclick="openCert('الاختراق الأخلاقي')">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      استلام شهادة إتمام المسار
-    </button>
-    <div class="cert-trigger-note">
-      أكملت جميع الدروس وبنيت مشروعك النهائي؟ اضغط لعرض شهادتك<br>
-      للتحقق الرسمي تواصل عبر
-      <a href="https://wa.me/22236521223" target="_blank" style="color:var(--green)">واتساب</a>
-      أو
-      <a href="https://wa.me/22236521223" target="_blank" style="color:#25d366">واتساب</a>
-    </div>
-  </div>
-
-  <div class="cert-trigger-wrap">
-    <button class="cert-trigger-btn" onclick="openCert('إنشاء المواقع الإلكترونية')">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      استلام شهادة إتمام المسار
-    </button>
-    <div class="cert-trigger-note">
-      أكملت جميع الدروس وبنيت مشروعك النهائي؟ اضغط لعرض شهادتك<br>
-      للتحقق الرسمي تواصل عبر
-      <a href="https://wa.me/22236521223" target="_blank" style="color:var(--green)">واتساب</a>
-      أو
-      <a href="https://wa.me/22236521223" target="_blank" style="color:#25d366">واتساب</a>
-    </div>
-  </div>
-
-  <div class="cert-trigger-wrap">
-    <button class="cert-trigger-btn" onclick="openCert('برمجة تطبيقات الهواتف')">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      استلام شهادة إتمام المسار
-    </button>
-    <div class="cert-trigger-note">
-      أكملت جميع الدروس وبنيت مشروعك النهائي؟ اضغط لعرض شهادتك<br>
-      للتحقق الرسمي تواصل عبر
-      <a href="https://wa.me/22236521223" target="_blank" style="color:var(--green)">واتساب</a>
-      أو
-      <a href="https://wa.me/22236521223" target="_blank" style="color:#25d366">واتساب</a>
-    </div>
-  </div>
-
-  <div class="cert-trigger-wrap">
-    <button class="cert-trigger-btn" onclick="openCert('الأمن السيبراني')">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      استلام شهادة إتمام المسار
-    </button>
-    <div class="cert-trigger-note">
-      أكملت جميع الدروس وبنيت مشروعك النهائي؟ اضغط لعرض شهادتك<br>
-      للتحقق الرسمي تواصل عبر
-      <a href="https://wa.me/22236521223" target="_blank" style="color:var(--green)">واتساب</a>
-      أو
-      <a href="https://wa.me/22236521223" target="_blank" style="color:#25d366">واتساب</a>
     </div>
   </div>
   <div class="site-footer">مِهارة</div>
+</div>
+
 </div>
 
 <div class="page course-pg" id="course-bots">
@@ -3927,12 +4515,12 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
     <button class="back-btn" onclick="goHome()">&#8594;</button>
     <div class="course-topbar-info">
       <div class="course-topbar-title">صنع البوتات الذكية</div>
-      <div class="course-topbar-sub">المسار الخامس · 6 دروس</div>
+      <div class="course-topbar-sub">المسار الخامس · 8 دروس</div>
     </div>
   </div>
   <div class="course-hero">
     <div class="course-eyebrow" style="color:#a78bfa">المسار الخامس</div>
- <div class="course-banner"><img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=900&q=75" alt="" loading="lazy"></div>
+ <div class="course-banner"><img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=900&q=75" alt="" loading="lazy" decoding="async"></div>
     <div class="course-title">صنع البوتات الذكية</div>
     <div class="course-desc">من الفكرة إلى بوت تلجرام حقيقي يعمل 24 ساعة — يقبل الدفع، يحفظ البيانات، ويعمل تلقائياً بدون تدخل منك.</div>
     <div class="course-tags">
@@ -3942,19 +4530,388 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
     </div>
     <div class="course-info-row">
       <div class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> يومان</div>
-      <div class="ci"><svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/></svg> 6 دروس</div>
+      <div class="ci"><svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/></svg> 8 دروس</div>
       <div class="ci"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/></svg> بوت حقيقي</div>
     </div>
   </div>
   <div class="lessons-sec">
     <div class="lessons-head">
       <h2>دروس المسار</h2>
-      <span>6 دروس</span>
+      <span>8 دروس</span>
     </div>
 
     <div class="lesson-row" id="l-bots-0">
-      <div class="lesson-trigger" onclick="toggleL('bots',0)">
-        <div class="l-num">1</div>
+ <div class="lesson-trigger" onclick="toggleL('bots',0)">
+ <div class="l-num">1</div>
+ <div class="l-info">
+ <div class="l-title">كيف يعمل الإنترنت والـ API</div>
+ <div class="l-dur">25 دقيقة</div>
+ </div>
+ <div class="l-chev"></div>
+ </div>
+ <div class="lesson-panel">
+ <div class="lp-inner">
+<h3>الدرس الأول: كيف يعمل الإنترنت والـ API</h3>
+<p>ما هو الـ API، كيف يتكلم البوت مع المواقع، وما هي الطلبات والردود</p>
+<hr class="lesson-hr">
+<h4 class="step-h">أولاً: ما هو البوت أصلاً؟</h4>
+<p>
+          قبل أي شيء، يجب أن تفهم ما الذي تبنيه.
+          <span class="term">البوت</span> هو برنامج يعمل تلقائياً بدون تدخل بشري.
+          يعني بدل ما أنت تفتح موقعاً وتضغط أزراراً وتقرأ معلومات — البوت يفعل هذا كله وحده بسرعة هائلة.
+        </p>
+<p>أمثلة على البوتات التي تستخدمها كل يوم بدون أن تعرف:</p>
+<table class="md-table">
+<tr>
+<th>البوت</th>
+<th>ماذا يفعل؟</th>
+</tr>
+<tr>
+<td>بوت Telegram</td>
+<td>يرد على رسائلك تلقائياً، يرسل لك أخباراً، ينظم مجموعات</td>
+</tr>
+<tr>
+<td>بوت Google</td>
+<td>يجوب الإنترنت كل يوم ويقرأ ملايين الصفحات ويخزّنها</td>
+</tr>
+<tr>
+<td>بوت تنبيهات الأسعار</td>
+<td>يراقب سعر منتج في Amazon ويرسل لك إشعاراً لما ينخفض</td>
+</tr>
+<tr>
+<td>بوت الردود التلقائية</td>
+<td>يرد على تعليقات Instagram أو رسائل WhatsApp بشكل تلقائي</td>
+</tr>
+</table>
+<hr class="lesson-hr">
+<h4 class="step-h">ثانياً: كيف يتواصل البوت مع الإنترنت؟</h4>
+<p>
+          أنت عندما تفتح موقعاً، المتصفح يرسل طلباً للخادم والخادم يردّ بصفحة HTML تراها.
+          البوت يفعل نفس الشيء بالضبط — لكن بدل ما يعرض الصفحة، يقرأ البيانات مباشرة ويعمل بها.
+        </p>
+<p>
+          هناك طريقتان يتواصل بهما البوت مع الإنترنت:
+        </p>
+<ul><li><strong>Web Scraping — قراءة الصفحة مباشرة:</strong> البوت يفتح صفحة HTML ويقرأ محتواها مثل ما يفعل المتصفح، لكن بدل ما يعرضها يستخرج منها البيانات التي يريدها. مثال: بوت يقرأ أسعار البنزين من موقع حكومي كل ساعة.</li><li><strong>API — الطريق الرسمي المرتّب:</strong> بعض المواقع توفر بوابة رسمية تعطيك البيانات مرتّبة ونظيفة بدون ما تحتاج تقرأ HTML. هذه البوابة تسمى API. وهذا ما سنشرحه بالتفصيل.</li></ul>
+<hr class="lesson-hr">
+<h4 class="step-h">ثالثاً: ما هو الـ API؟ — الشرح الكامل</h4>
+<p>
+          كلمة <span class="term">API</span> اختصار لـ Application Programming Interface.
+          بالعربي: واجهة برمجة التطبيقات. لكن هذا الاسم معقد، فلنفهمه بمثال بسيط جداً.
+        </p>
+<div class="callout"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><div class="co-t">تخيّل أنك في مطعم. أنت لا تدخل للمطبخ وتطبخ بنفسك — بدل ذلك تطلب من النادل.
+            النادل يأخذ طلبك للمطبخ ويرجع لك بالأكل.
+            <br/><br/>
+            في عالم البرمجة: أنت = البوت، النادل = الـ API، المطبخ = الخادم.
+            الـ API هو الوسيط الذي يأخذ طلبك ويجيبك بالبيانات.</div></div>
+<p>
+          مثال حقيقي: تطبيق الطقس في هاتفك لا يملك أجهزة أرصاد جوية.
+          يرسل طلباً لـ API طقس مثل OpenWeatherMap ويقول: "أعطني درجة الحرارة في نواكشوط الآن".
+          الـ API يردّ بالبيانات، والتطبيق يعرضها لك.
+        </p>
+<hr class="lesson-hr">
+<h4 class="step-h">رابعاً: كيف يبدو الطلب والرد في الـ API؟</h4>
+<p>
+          الـ API يعمل عبر <span class="term">HTTP</span> — نفس البروتوكول الذي يعمل به الإنترنت.
+          البوت يرسل طلباً لعنوان محدد يسمى <span class="term">Endpoint</span>، والـ API يردّ بالبيانات بصيغة تسمى <span class="term">JSON</span>.
+        </p>
+<p><strong style="color:#fff;">مثال: طلب معلومات عن الطقس</strong></p>
+<div class="code-label">الطلب الذي يرسله البوت — HTTP Request</div>
+<div class="code-box"><div class="code-box-hd"><span class="lang">HTTP</span></div><pre>GET https://api.weather.com/v1/current?city=Nouakchott&amp;key=ABC123</pre></div>
+<p>
+          هذا الطلب يقول: "أعطني (<span class="term">GET</span>) الطقس الحالي للمدينة نواكشوط."
+          الـ <span class="term">key</span> هو مفتاح سري يثبت أنك أنت من يطلب — مثل بطاقة الهوية.
+        </p>
+<div class="code-label">الرد الذي يستقبله البوت — JSON Response</div>
+<div class="code-box"><div class="code-box-hd"><span class="lang">JSON</span></div><pre>{
+  <span class="c-key">"city"</span>: <span class="c-str">"Nouakchott"</span>,
+  <span class="c-key">"temperature"</span>: <span class="c-num">38</span>,
+  <span class="c-key">"unit"</span>: <span class="c-str">"celsius"</span>,
+  <span class="c-key">"condition"</span>: <span class="c-str">"sunny"</span>,
+  <span class="c-key">"humidity"</span>: <span class="c-num">24</span>,
+  <span class="c-key">"wind_speed"</span>: <span class="c-num">15</span>
+}</pre></div>
+<p>
+          هذا هو <span class="term">JSON</span> — صيغة بسيطة لتنظيم البيانات على شكل أزواج: اسم المعلومة وقيمتها.
+          البوت يقرأ هذا الرد ويستخرج منه ما يريد. مثلاً يقرأ قيمة temperature ويرسلها لك على Telegram.
+        </p>
+<hr class="lesson-hr">
+<h4 class="step-h">خامساً: أنواع طلبات HTTP التي يستخدمها البوت</h4>
+<table class="md-table">
+<tr>
+<th>نوع الطلب</th>
+<th>ماذا يفعل؟</th>
+<th>مثال</th>
+</tr>
+<tr>
+<td>GET</td>
+<td>يطلب بيانات فقط — لا يغير شيئاً</td>
+<td>اجلب لي قائمة المنتجات</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>يرسل بيانات جديدة للخادم</td>
+<td>أرسل رسالة، أنشئ حساباً</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>يعدّل بيانات موجودة</td>
+<td>غيّر اسم المستخدم</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>يحذف بيانات</td>
+<td>احذف هذا المنشور</td>
+</tr>
+</table>
+<p>معظم بوتاتك ستستخدم <span class="term">GET</span> لجلب المعلومات و<span class="term">POST</span> لإرسالها.</p>
+<hr class="lesson-hr">
+<h4 class="step-h">سادساً: أمثلة على APIs مشهورة ستستخدمها</h4>
+<table class="md-table">
+<tr>
+<th>الـ API</th>
+<th>ماذا يفعل؟</th>
+<th>يستخدم في بوتات</th>
+</tr>
+<tr>
+<td>Telegram Bot API</td>
+<td>يرسل ويستقبل رسائل Telegram</td>
+<td>بوتات التشات والتنبيهات</td>
+</tr>
+<tr>
+<td>OpenAI API</td>
+<td>يتواصل مع ChatGPT</td>
+<td>بوتات الذكاء الاصطناعي</td>
+</tr>
+<tr>
+<td>WhatsApp Business API</td>
+<td>يرسل ويستقبل رسائل WhatsApp</td>
+<td>بوتات خدمة العملاء</td>
+</tr>
+<tr>
+<td>Twitter/X API</td>
+<td>يقرأ وينشر تغريدات</td>
+<td>بوتات النشر التلقائي</td>
+</tr>
+<tr>
+<td>Currency API</td>
+<td>يعطيك أسعار العملات لحظياً</td>
+<td>بوتات تتبع الأسعار</td>
+</tr>
+</table>
+<hr class="lesson-hr">
+<h4 class="step-h">خلاصة الدرس</h4><ul>
+<li>البوت برنامج يعمل تلقائياً بدون تدخل بشري</li>
+<li>البوت يتواصل مع الإنترنت إما بقراءة HTML مباشرة أو عبر API</li>
+<li>الـ API هو بوابة رسمية تعطيك البيانات منظمة ونظيفة</li>
+<li>البوت يرسل طلب HTTP لعنوان Endpoint والـ API يردّ بصيغة JSON</li>
+<li>أنواع الطلبات: GET للجلب، POST للإرسال، PUT للتعديل، DELETE للحذف</li>
+<li>Telegram وOpenAI وWhatsApp كلها توفر APIs يمكن بناء بوتات عليها</li>
+</ul>
+<hr class="lesson-hr">
+<div class="l-nav"><button class="l-btn l-btn-primary" onclick="nextL('bots',0)">الدرس التالي ←</button></div>
+ </div>
+ </div>
+ </div>
+
+ <div class="lesson-row" id="l-bots-1">
+ <div class="lesson-trigger" onclick="toggleL('bots',1)">
+ <div class="l-num">2</div>
+ <div class="l-info">
+ <div class="l-title">أساسيات Python من الصفر</div>
+ <div class="l-dur">30 دقيقة</div>
+ </div>
+ <div class="l-chev"></div>
+ </div>
+ <div class="lesson-panel">
+ <div class="lp-inner">
+<h3>الدرس الثاني: أساسيات Python من الصفر</h3>
+<p>المتغيرات، الشروط، الحلقات، الدوال — كل شيء بأمثلة حية تعمل فعلاً</p>
+<hr class="lesson-hr">
+<h4 class="step-h">أولاً: لماذا Python تحديداً؟</h4>
+<p>
+          هناك عشرات لغات البرمجة في العالم. لماذا نختار Python لبناء البوتات؟
+        </p>
+<table class="md-table">
+<tr>
+<th>السبب</th>
+<th>الشرح</th>
+</tr>
+<tr>
+<td>كودها يشبه الإنجليزية</td>
+<td>تقرأ كود Python وتفهمه حتى لو لم تتعلمها من قبل</td>
+</tr>
+<tr>
+<td>مكتبات جاهزة لكل شيء</td>
+<td>في Python مكتبة لإرسال طلبات HTTP، ومكتبة لـ Telegram، ومكتبة للذكاء الاصطناعي — كلها بسطرين</td>
+</tr>
+<tr>
+<td>الأكثر استخداماً في الذكاء الاصطناعي</td>
+<td>كل أدوات AI مثل ChatGPT وTensorFlow مكتوبة بها</td>
+</tr>
+<tr>
+<td>مجتمع ضخم</td>
+<td>أي مشكلة تواجهها، ألف شخص واجهها قبلك وكتب الحل</td>
+</tr>
+</table>
+<div class="callout"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><div class="co-t">Python هي اللغة الرسمية للبوتات والذكاء الاصطناعي. تعلّمها مرة وستفتح أمامك أبواب لا تنتهي.</div></div>
+<hr class="lesson-hr">
+<h4 class="step-h">ثانياً: المتغيرات — صناديق لحفظ البيانات</h4>
+<p>
+<span class="term">المتغير</span> هو صندوق في ذاكرة الحاسوب تضع فيه بياناً وتعطيه اسماً حتى تستخدمه لاحقاً.
+          في Python لا تحتاج تقول "أنشئ صندوقاً" — فقط اكتب الاسم ثم = ثم القيمة.
+        </p>
+<div class="code-box"><div class="code-box-hd"><span class="lang">Python</span></div><pre><span class="c-com"># نص — يوضع بين علامات اقتباس</span>
+اسم = <span class="c-str">"محمد"</span>
+مدينة = <span class="c-str">"نواكشوط"</span>
+
+<span class="c-com"># أرقام — بدون علامات اقتباس</span>
+عمر = <span class="c-num">25</span>
+رصيد = <span class="c-num">150.75</span>
+
+<span class="c-com"># صح أو خطأ (True أو False فقط)</span>
+مشترك = <span class="c-kw">True</span>
+محظور = <span class="c-kw">False</span>
+
+<span class="c-com"># طباعة قيمة المتغير على الشاشة</span>
+<span class="c-fn">print</span>(اسم)
+<span class="c-fn">print</span>(<span class="c-str">"مرحباً"</span>, اسم, <span class="c-str">"عمرك"</span>, عمر)</pre></div>
+<div class="output-box">
+<div class="label">// النتيجة</div>
+<pre>محمد
+مرحباً محمد عمرك 25</pre>
+</div>
+<p>
+          في البوت مثلاً: تحفظ رقم المستخدم في متغير، تحفظ رسالته في متغير، ثم تعمل بهما.
+        </p>
+<hr class="lesson-hr">
+<h4 class="step-h">ثالثاً: الشروط — البوت يفكر ويقرر</h4>
+<p>
+          الشرط يقول للبرنامج: "إذا كان كذا، افعل كذا. وإلا افعل كذا آخر."
+          هذا ما يجعل البوت يتصرف بذكاء بدل ما يكرر نفس الشيء دائماً.
+        </p>
+<div class="code-box"><div class="code-box-hd"><span class="lang">Python</span></div><pre><span class="c-com"># مثال: بوت يرد بناءً على الرسالة</span>
+رسالة = <span class="c-str">"مرحبا"</span>
+
+<span class="c-kw">if</span> رسالة == <span class="c-str">"مرحبا"</span>:
+    <span class="c-fn">print</span>(<span class="c-str">"أهلاً! كيف أساعدك؟"</span>)
+<span class="c-kw">elif</span> رسالة == <span class="c-str">"الأسعار"</span>:
+    <span class="c-fn">print</span>(<span class="c-str">"الاشتراك الشهري 10 دولار"</span>)
+<span class="c-kw">else</span>:
+    <span class="c-fn">print</span>(<span class="c-str">"لم أفهم طلبك، حاول مرة أخرى"</span>)</pre></div>
+<div class="output-box">
+<div class="label">// النتيجة (لأن رسالة = "مرحبا")</div>
+<pre>أهلاً! كيف أساعدك؟</pre>
+</div>
+<p>
+<span class="term">if</span> تعني "إذا"، <span class="term">elif</span> تعني "وإلا إذا"، <span class="term">else</span> تعني "وإلا".
+          لاحظ المسافة قبل print — هذه مهمة جداً في Python، تسمى Indentation وتعني أن هذا السطر تابع للشرط فوقه.
+        </p>
+<hr class="lesson-hr">
+<h4 class="step-h">رابعاً: الحلقات — البوت يكرر بدون تعب</h4>
+<p>
+<span class="term">الحلقة</span> تأمر البرنامج بتكرار شيء عدة مرات.
+          بدلاً من أن تكتب نفس السطر مئة مرة، تكتبه مرة داخل حلقة وتقول له كرره مئة مرة.
+        </p>
+<p><strong style="color:#fff;">حلقة for — كرر لكل عنصر في قائمة</strong></p>
+<div class="code-box"><div class="code-box-hd"><span class="lang">Python</span></div><pre><span class="c-com"># قائمة مستخدمين سنرسل لهم إشعاراً</span>
+مستخدمون = [<span class="c-str">"أحمد"</span>, <span class="c-str">"فاطمة"</span>, <span class="c-str">"خالد"</span>, <span class="c-str">"مريم"</span>]
+
+<span class="c-kw">for</span> مستخدم <span class="c-kw">in</span> مستخدمون:
+    <span class="c-fn">print</span>(<span class="c-str">"تم إرسال إشعار لـ"</span>, مستخدم)</pre></div>
+<div class="output-box">
+<div class="label">// النتيجة</div>
+<pre>تم إرسال إشعار لـ أحمد
+تم إرسال إشعار لـ فاطمة
+تم إرسال إشعار لـ خالد
+تم إرسال إشعار لـ مريم</pre>
+</div>
+<p><strong style="color:#fff;">حلقة while — كرر طالما الشرط صحيح</strong></p>
+<div class="code-box"><div class="code-box-hd"><span class="lang">Python</span></div><pre><span class="c-com"># البوت يظل يستقبل رسائل حتى يقول المستخدم "خروج"</span>
+يعمل = <span class="c-kw">True</span>
+
+<span class="c-kw">while</span> يعمل:
+    رسالة = <span class="c-fn">input</span>(<span class="c-str">"اكتب رسالتك: "</span>)
+    <span class="c-kw">if</span> رسالة == <span class="c-str">"خروج"</span>:
+        <span class="c-fn">print</span>(<span class="c-str">"إلى اللقاء!"</span>)
+        يعمل = <span class="c-kw">False</span>
+    <span class="c-kw">else</span>:
+        <span class="c-fn">print</span>(<span class="c-str">"استلمت:"</span>, رسالة)</pre></div>
+<p>هذا بالضبط كيف تعمل بوتات الدردشة — حلقة while لا تتوقف وتستقبل رسائل باستمرار.</p>
+<hr class="lesson-hr">
+<h4 class="step-h">خامساً: الدوال — علبة أوامر تستخدمها متى تريد</h4>
+<p>
+<span class="term">الدالة</span> هي مجموعة أوامر تعطيها اسماً، وتستدعيها متى تريد بدل ما تكتب نفس الأوامر مرة أخرى.
+          تكتبها مرة واحدة وتستخدمها ألف مرة.
+        </p>
+<div class="code-box"><div class="code-box-hd"><span class="lang">Python</span></div><pre><span class="c-com"># تعريف الدالة — نكتبها مرة واحدة</span>
+<span class="c-kw">def</span> <span class="c-fn">رد_على_مستخدم</span>(اسم, رسالة):
+    <span class="c-kw">if</span> رسالة == <span class="c-str">"مرحبا"</span>:
+        <span class="c-kw">return</span> <span class="c-str">"أهلاً "</span> + اسم + <span class="c-str">"! كيف أساعدك؟"</span>
+    <span class="c-kw">elif</span> رسالة == <span class="c-str">"وداع"</span>:
+        <span class="c-kw">return</span> <span class="c-str">"إلى اللقاء "</span> + اسم + <span class="c-str">"!"</span>
+    <span class="c-kw">else</span>:
+        <span class="c-kw">return</span> <span class="c-str">"لم أفهم طلبك يا "</span> + اسم
+
+<span class="c-com"># استدعاء الدالة — نستخدمها متى نريد</span>
+رد1 = <span class="c-fn">رد_على_مستخدم</span>(<span class="c-str">"أحمد"</span>, <span class="c-str">"مرحبا"</span>)
+رد2 = <span class="c-fn">رد_على_مستخدم</span>(<span class="c-str">"فاطمة"</span>, <span class="c-str">"وداع"</span>)
+
+<span class="c-fn">print</span>(رد1)
+<span class="c-fn">print</span>(رد2)</pre></div>
+<div class="output-box">
+<div class="label">// النتيجة</div>
+<pre>أهلاً أحمد! كيف أساعدك؟
+إلى اللقاء فاطمة!</pre>
+</div>
+<p>
+<span class="term">def</span> تعني "عرّف دالة جديدة". <span class="term">return</span> تعني "أرجع هذه القيمة كنتيجة".
+          في البوت الحقيقي، كل وظيفة تصبح دالة: دالة للرد، دالة لجلب الطقس، دالة لحفظ المستخدم.
+        </p>
+<hr class="lesson-hr">
+<h4 class="step-h">سادساً: كيف يجلب البوت بيانات من API بـ Python؟</h4>
+<p>
+          الآن نجمع درس API مع Python. في Python هناك مكتبة اسمها <span class="term">requests</span>
+          مهمتها الوحيدة إرسال طلبات HTTP. بسطرين فقط تستطيع التحدث مع أي API في العالم.
+        </p>
+<div class="code-box"><div class="code-box-hd"><span class="lang">Python</span></div><pre><span class="c-com"># أولاً نستورد المكتبة</span>
+<span class="c-kw">import</span> requests
+
+<span class="c-com"># نرسل طلب GET لـ API الطقس</span>
+رابط = <span class="c-str">"https://api.weather.com/v1/current?city=Nouakchott"</span>
+رد = requests.<span class="c-fn">get</span>(رابط)
+
+<span class="c-com"># نحوّل الرد من JSON إلى بيانات Python</span>
+بيانات = رد.<span class="c-fn">json</span>()
+
+<span class="c-com"># نستخرج درجة الحرارة</span>
+حرارة = بيانات[<span class="c-str">"temperature"</span>]
+مدينة = بيانات[<span class="c-str">"city"</span>]
+
+<span class="c-fn">print</span>(<span class="c-str">"درجة الحرارة في"</span>, مدينة, <span class="c-str">"هي"</span>, حرارة, <span class="c-str">"درجة"</span>)</pre></div>
+<div class="output-box">
+<div class="label">// النتيجة</div>
+<pre>درجة الحرارة في Nouakchott هي 38 درجة</pre>
+</div>
+<div class="callout"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><div class="co-t">هذا بالضبط ما يفعله أي بوت حقيقي. بعد أن تتعلم هذا، ستقدر تبني بوتاً يرسل الطقس كل صباح على Telegram.</div></div>
+<hr class="lesson-hr">
+<h4 class="step-h">خلاصة الدرس</h4><ul>
+<li>Python هي اللغة الأمثل للبوتات لأنها بسيطة ومكتباتها ضخمة</li>
+<li>المتغير صندوق يحفظ بياناً ويعطيه اسماً لاستخدامه لاحقاً</li>
+<li>الشرط if/elif/else يجعل البوت يفكر ويتخذ قرارات مختلفة</li>
+<li>الحلقة for تكرر أمراً لكل عنصر في قائمة، وwhile تكرره طالما الشرط صحيح</li>
+<li>الدالة def مجموعة أوامر معبّأة باسم تستدعيها متى تريد</li>
+<li>مكتبة requests تتيح للبوت التحدث مع أي API في العالم بسطرين فقط</li>
+</ul>
+<hr class="lesson-hr">
+<div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('bots',1)">→ السابق</button><button class="l-btn l-btn-primary" onclick="nextL('bots',1)">الدرس التالي ←</button></div>
+ </div>
+ </div>
+ </div>
+
+ <div class="lesson-row" id="l-bots-2">
+      <div class="lesson-trigger" onclick="toggleL('bots',2)">
+        <div class="l-num">3</div>
         <div class="l-info">
           <div class="l-title">ما هو البوت ولماذا يحتاجه عملك؟</div>
           <div class="l-dur">25 دقيقة</div>
@@ -4034,14 +4991,14 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
 <p>صحح إجاباتي.&quot;</p>
 <hr class="lesson-hr">
 <hr class="lesson-hr">
-          <div class="l-nav"><button class="l-btn l-btn-primary" onclick="nextL('bots',0)">الدرس التالي ←</button></div>
+          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('bots',2)">→ السابق</button><button class="l-btn l-btn-primary" onclick="nextL('bots',2)">الدرس التالي ←</button></div>
         </div>
       </div>
     </div>
 
-    <div class="lesson-row" id="l-bots-1">
-      <div class="lesson-trigger" onclick="toggleL('bots',1)">
-        <div class="l-num">2</div>
+    <div class="lesson-row" id="l-bots-3">
+      <div class="lesson-trigger" onclick="toggleL('bots',3)">
+        <div class="l-num">4</div>
         <div class="l-info">
           <div class="l-title">أول بوت حقيقي — من الفكرة للتشغيل</div>
           <div class="l-dur">35 دقيقة</div>
@@ -4112,14 +5069,14 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
 <p>&quot;لديّ فكرة بوت لـ [اذكر نوع العمل]. اسألني أسئلة لفهم ما أريد بالضبط، ثم ابنِ لي البوت. بعد بنائه اطلب مني شرح ما يفعله كل قسم في الكود بكلامي الخاص. صحح فهمي.&quot;</p>
 <hr class="lesson-hr">
 <hr class="lesson-hr">
-          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('bots',1)">→ السابق</button><button class="l-btn l-btn-primary" onclick="nextL('bots',1)">الدرس التالي ←</button></div>
+          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('bots',3)">→ السابق</button><button class="l-btn l-btn-primary" onclick="nextL('bots',3)">الدرس التالي ←</button></div>
         </div>
       </div>
     </div>
 
-    <div class="lesson-row" id="l-bots-2">
-      <div class="lesson-trigger" onclick="toggleL('bots',2)">
-        <div class="l-num">3</div>
+    <div class="lesson-row" id="l-bots-4">
+      <div class="lesson-trigger" onclick="toggleL('bots',4)">
+        <div class="l-num">5</div>
         <div class="l-info">
           <div class="l-title">بوت يتذكر ويتعلم — حفظ بيانات المستخدمين</div>
           <div class="l-dur">30 دقيقة</div>
@@ -4211,14 +5168,14 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
 <p>اطلب مني وصف الطلب الذي سأرسله لـ Claude لبناء هذا البوت. قيّم وصفي وحسّنه.&quot;</p>
 <hr class="lesson-hr">
 <hr class="lesson-hr">
-          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('bots',2)">→ السابق</button><button class="l-btn l-btn-primary" onclick="nextL('bots',2)">الدرس التالي ←</button></div>
+          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('bots',4)">→ السابق</button><button class="l-btn l-btn-primary" onclick="nextL('bots',4)">الدرس التالي ←</button></div>
         </div>
       </div>
     </div>
 
-    <div class="lesson-row" id="l-bots-3">
-      <div class="lesson-trigger" onclick="toggleL('bots',3)">
-        <div class="l-num">4</div>
+    <div class="lesson-row" id="l-bots-5">
+      <div class="lesson-trigger" onclick="toggleL('bots',5)">
+        <div class="l-num">6</div>
         <div class="l-info">
           <div class="l-title">الأتمتة — البوت يعمل بدون أن تفتح جهازك</div>
           <div class="l-dur">30 دقيقة</div>
@@ -4291,14 +5248,14 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
 <p>ساعدني في كتابة الطلب الكامل والدقيق الذي سأرسله لـ Claude لبناء هذا البوت. راجع طلبي وحسّنه.&quot;</p>
 <hr class="lesson-hr">
 <hr class="lesson-hr">
-          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('bots',3)">→ السابق</button><button class="l-btn l-btn-primary" onclick="nextL('bots',3)">الدرس التالي ←</button></div>
+          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('bots',5)">→ السابق</button><button class="l-btn l-btn-primary" onclick="nextL('bots',5)">الدرس التالي ←</button></div>
         </div>
       </div>
     </div>
 
-    <div class="lesson-row" id="l-bots-4">
-      <div class="lesson-trigger" onclick="toggleL('bots',4)">
-        <div class="l-num">5</div>
+    <div class="lesson-row" id="l-bots-6">
+      <div class="lesson-trigger" onclick="toggleL('bots',6)">
+        <div class="l-num">7</div>
         <div class="l-info">
           <div class="l-title">بوت يقبل الدفع ويدير المبيعات</div>
           <div class="l-dur">35 دقيقة</div>
@@ -4385,14 +5342,14 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
 <p>اطلب مني وصف النظام الكامل الذي أريده بالتفصيل. بعد وصفي ابنِ لي البوت كاملاً.&quot;</p>
 <hr class="lesson-hr">
 <hr class="lesson-hr">
-          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('bots',4)">→ السابق</button><button class="l-btn l-btn-primary" onclick="nextL('bots',4)">الدرس التالي ←</button></div>
+          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('bots',6)">→ السابق</button><button class="l-btn l-btn-primary" onclick="nextL('bots',6)">الدرس التالي ←</button></div>
         </div>
       </div>
     </div>
 
-    <div class="lesson-row" id="l-bots-5">
-      <div class="lesson-trigger" onclick="toggleL('bots',5)">
-        <div class="l-num">6</div>
+    <div class="lesson-row" id="l-bots-7">
+      <div class="lesson-trigger" onclick="toggleL('bots',7)">
+        <div class="l-num">8</div>
         <div class="l-info">
           <div class="l-title">نشر البوت ليعمل 24 ساعة وإدارته</div>
           <div class="l-dur">25 دقيقة</div>
@@ -4474,7 +5431,7 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
 <li>بيع هذه الخدمة للشركات وتحقيق دخل منها</li>
 </ul>
 <hr class="lesson-hr">
-          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('bots',5)">→ السابق</button><button class="l-btn" style="background:#2ea043;color:#fff">اكتمل المسار</button></div>
+          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('bots',7)">→ السابق</button><button class="l-btn" style="background:#2ea043;color:#fff" onclick="finishTrack('bots',7)">اكتمل المسار</button></div>
         </div>
       </div>
     </div>
@@ -4482,7 +5439,7 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
   </div>
 
   <div class="cert-trigger-wrap">
-    <button class="cert-trigger-btn" onclick="openCert('صنع البوتات الذكية')">
+    <button class="cert-trigger-btn" onclick="openCert('bots')">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
       استلام شهادة إتمام المسار
     </button>
@@ -4507,7 +5464,7 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
   </div>
   <div class="course-hero">
     <div class="course-eyebrow" style="color:#2dd4bf">المسار السادس</div>
- <div class="course-banner"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=75" alt="" loading="lazy"></div>
+ <div class="course-banner"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=75" alt="" loading="lazy" decoding="async"></div>
     <div class="course-title">أدوات الذكاء الاصطناعي</div>
     <div class="course-desc">من فهم أساسيات الذكاء الاصطناعي إلى توظيفه في كل مجال — بناء مشاريع حقيقية وإتقان فن التواصل مع النماذج الذكية.</div>
     <div class="course-tags">
@@ -5081,7 +6038,7 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
 <li>متابعة التطورات والبقاء متقدماً في مجال متغير بسرعة</li>
 </ul>
 <hr class="lesson-hr">
-          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('ai',5)">→ السابق</button><button class="l-btn" style="background:#2ea043;color:#fff">اكتمل المسار</button></div>
+          <div class="l-nav"><button class="l-btn l-btn-ghost" onclick="prevL('ai',5)">→ السابق</button><button class="l-btn" style="background:#2ea043;color:#fff" onclick="finishTrack('ai',5)">اكتمل المسار</button></div>
         </div>
       </div>
     </div>
@@ -5089,7 +6046,7 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
   </div>
 
   <div class="cert-trigger-wrap">
-    <button class="cert-trigger-btn" onclick="openCert('أدوات الذكاء الاصطناعي')">
+    <button class="cert-trigger-btn" onclick="openCert('ai')">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
       استلام شهادة إتمام المسار
     </button>
@@ -5112,26 +6069,32 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
     <div class="cert-inner">
       <div class="cert-border">
         <div class="cert-logo">مِهارة</div>
+        <div class="cert-logo-sub">MAHARA ACADEMY</div>
         <div class="cert-heading">شهادة إتمام</div>
         <div class="cert-name" id="cert-name">اسم الطالب</div>
         <div class="cert-body">
-          أتم بنجاح جميع دروس مسار<br>
-          وقام ببناء المشروع النهائي المطلوب
+          أتمّ بنجاح جميع دروس مسار<br>
+          وأنجز المشروع النهائي المطلوب
         </div>
         <div class="cert-track" id="cert-track">اسم المسار</div>
-        <div class="cert-body" style="font-size:.75rem;color:#888">
-          هذه الشهادة تُقدَّم تقديراً للجهد المبذول وإثباتاً للمهارة المكتسبة
+        <div class="cert-body" style="font-size:.72rem;color:#999">
+          تُمنح هذه الشهادة تقديراً للجهد المبذول وإثباتاً للمهارة المكتسبة
         </div>
         <div class="cert-footer">
           <div class="cert-sig">
+            <div class="cert-sig-mark">مِ</div>
             <div class="cert-sig-line"></div>
-            <span>المدرب</span>
+            <span>إدارة مِهارة</span>
           </div>
           <div class="cert-date" id="cert-date"></div>
           <div class="cert-sig">
+            <div class="cert-sig-mark" style="font-style:normal;transform:rotate(0)">✦</div>
             <div class="cert-sig-line"></div>
             <span>منصة مِهارة</span>
           </div>
+        </div>
+        <div class="cert-seal" aria-hidden="true">
+          <div class="cert-seal-core">مِ</div>
         </div>
       </div>
     </div>
@@ -5164,6 +6127,7 @@ function openCourse(id){
  document.querySelectorAll('.course-pg').forEach(p=>p.classList.remove('show'));
  document.getElementById('course-'+id).classList.add('show');
  window.scrollTo({top:0,behavior:'instant'});
+ refreshTrackProgress(id);
 }
 function goHome(){
  document.querySelectorAll('.course-pg,.about-pg,.legal-pg').forEach(p=>p.classList.remove('show'));
@@ -5183,7 +6147,7 @@ function nextL(course,idx){
  event.stopPropagation();
  const cur=document.getElementById('l-'+course+'-'+idx);
  cur.classList.remove('open');
- cur.classList.add('done');
+ markDone(course, idx);
  const next=document.getElementById('l-'+course+'-'+(idx+1));
  if(next){next.classList.add('open');next.scrollIntoView({behavior:'smooth',block:'start'})}
 }
@@ -5234,7 +6198,7 @@ try{
 </div>
 <div class="page legal-pg" id="legal-privacy">
   <div class="course-hero"><button class="back-btn" onclick="closeLegal()">&#8594;</button><div class="course-eyebrow">وثيقة</div><h1 class="course-title">سياسة الخصوصية</h1></div>
-  <div class="legal-body"><p>نحترم خصوصيتك ونحرص على حماية بياناتك. توضّح هذه السياسة كيف نتعامل معها:</p><h3>البيانات التي نجمعها</h3><p>عند الاشتراك قد نطلب اسمك ورقم تواصلك وصورة إيصال الدفع، وذلك فقط لغرض التحقّق من الدفع وتفعيل وصولك للمسار.</p><h3>كيف نستخدمها</h3><p>تُستخدم بياناتك حصراً للتحقّق من الدفع وتقديم الخدمة والتواصل معك عند الحاجة. لا نبيع بياناتك ولا نشاركها مع أيّ طرف ثالث لأغراض تجارية.</p><h3>حفظ الوصول</h3><p>تُحفظ حالة اشتراكك محلياً في متصفّحك لتسهيل دخولك للمسارات التي اشتركت فيها دون إعادة الدفع.</p><h3>الأمان</h3><p>نتّخذ التدابير المعقولة لحماية معلوماتك ونتعامل معها بسرّية تامة.</p><div style="text-align:center;margin-top:22px"><button class="back-btn" onclick="closeLegal()" style="position:static">العودة للرئيسية</button></div></div>
+  <div class="legal-body"><p>نحترم خصوصيتك ونحرص على حماية بياناتك. توضّح هذه السياسة كيف نتعامل معها:</p><h3>البيانات التي نجمعها</h3><p>عند الاشتراك قد نطلب اسمك ورقم تواصلك وصورة إيصال الدفع، وذلك فقط لغرض التحقّق من الدفع وتفعيل وصولك للمسار.</p><h3>كيف نستخدمها</h3><p>تُستخدم بياناتك حصراً للتحقّق من الدفع وتقديم الخدمة والتواصل معك عند الحاجة. لا نبيع بياناتك ولا نشاركها مع أيّ طرف ثالث لأغراض تجارية.</p><h3>حفظ الوصول</h3><p>تُحفظ حالة اشتراكك وتقدّمك في الدروس بشكل آمن في قاعدة بيانات المنصة، مرتبطةً بحسابك، حتى تتمكّن من الوصول لمساراتك ومتابعة تعلّمك من أيّ جهاز تسجّل دخولك منه.</p><h3>الأمان</h3><p>نتّخذ التدابير المعقولة لحماية معلوماتك ونتعامل معها بسرّية تامة.</p><div style="text-align:center;margin-top:22px"><button class="back-btn" onclick="closeLegal()" style="position:static">العودة للرئيسية</button></div></div>
 </div>
 <div class="page legal-pg" id="legal-refund">
   <div class="course-hero"><button class="back-btn" onclick="closeLegal()">&#8594;</button><div class="course-eyebrow">وثيقة</div><h1 class="course-title">سياسة الاسترجاع</h1></div>
@@ -5334,6 +6298,8 @@ async function initAuth() {
           currentUser = await res.json();
           currentUser._token = session.access_token;
           await loadUserCourses();
+      await loadProgress();
+          await loadProgress();
           updateAuthUI();
           return;
         }
@@ -5494,13 +6460,95 @@ function doLogout(){
 // ===== ACCESS SYSTEM =====
 const COURSE_PRICES={web:1000,app:1000,cyber:1000,ethical:1000,ai:2000,bots:890};
 const COURSE_NAMES={web:'إنشاء المواقع',app:'تطبيقات الهواتف',cyber:'الأمن السيبراني',ethical:'الاختراق الأخلاقي',bots:'صنع البوتات',ai:'الذكاء الاصطناعي'};
+const TRACK_LESSON_COUNT={web:10,app:9,cyber:7,ethical:6,bots:8,ai:6};
+let progressSet={};
+function refreshTrackProgress(track){
+  const total=TRACK_LESSON_COUNT[track]||0;
+  const doneSet=progressSet[track]||new Set();
+  const subEl=document.querySelector('#course-'+track+' .course-topbar-sub');
+  if(subEl) subEl.textContent=doneSet.size+'/'+total+' دروس مكتملة';
+  for(let i=0;i<total;i++){
+    const row=document.getElementById('l-'+track+'-'+i);
+    if(row) row.classList.toggle('done', doneSet.has(i));
+  }
+}
+async function loadProgress(){
+  if(!currentUser) return;
+  try{
+    const res=await fetch(SB_URL+'/rest/v1/lesson_progress?user_id=eq.'+currentUser.id+'&select=track,lesson_index',{
+      headers:{'apikey':SB_KEY,'Authorization':'Bearer '+currentUser._token}
+    });
+    if(res.ok){
+      const rows=await res.json();
+      progressSet={};
+      rows.forEach(function(r){ (progressSet[r.track]=progressSet[r.track]||new Set()).add(r.lesson_index); });
+      Object.keys(TRACK_LESSON_COUNT).forEach(refreshTrackProgress);
+    }
+  }catch(e){}
+}
+async function markDone(course, idx){
+  (progressSet[course]=progressSet[course]||new Set()).add(idx);
+  refreshTrackProgress(course);
+  if(!currentUser) return;
+  try{
+    await fetch(SB_URL+'/rest/v1/lesson_progress?on_conflict=user_id,track,lesson_index',{
+      method:'POST',
+      headers:{'apikey':SB_KEY,'Authorization':'Bearer '+currentUser._token,'Content-Type':'application/json','Prefer':'resolution=ignore-duplicates,return=minimal'},
+      body:JSON.stringify({user_id:currentUser.id, track:course, lesson_index:idx})
+    });
+  }catch(e){}
+}
+function finishTrack(course, idx){
+  event.stopPropagation();
+  markDone(course, idx);
+  alert('🎉 مبروك! أكملت جميع دروس هذا المسار.\nاضغط زر «استلام شهادة إتمام المسار» بالأسفل لعرض شهادتك.');
+}
+async function verifyOwnership(trackId){
+  if(!currentUser) return;
+  try{
+    const res=await fetch(SB_URL+'/rest/v1/purchases?user_id=eq.'+currentUser.id+'&status=eq.approved&course=eq.'+encodeURIComponent(COURSE_NAMES[trackId])+'&select=id',{
+      headers:{'apikey':SB_KEY,'Authorization':'Bearer '+currentUser._token}
+    });
+    if(res.ok){
+      const rows=await res.json();
+      if(rows.length===0){
+        try{ localStorage.removeItem('mahara_'+trackId); }catch(e){}
+        refreshLocks();
+        if(document.getElementById('course-'+trackId).classList.contains('show')) goHome();
+      }
+    }
+  }catch(e){}
+}
+async function openCert(trackId){
+  if(!currentUser){ openAuth('login'); return; }
+  if(!owned(trackId)){ alert('يجب شراء هذا المسار أولاً لاستلام الشهادة.'); return; }
+  const total=TRACK_LESSON_COUNT[trackId]||0;
+  const doneCount=(progressSet[trackId]||new Set()).size;
+  if(doneCount<total){
+    alert('أكمل جميع دروس المسار أولاً ('+doneCount+'/'+total+' دروس مكتملة) لتحصل على شهادتك.');
+    return;
+  }
+  let studentName=currentUser.email;
+  try{
+    const res=await fetch(SB_URL+'/rest/v1/purchases?user_id=eq.'+currentUser.id+'&status=eq.approved&course=eq.'+encodeURIComponent(COURSE_NAMES[trackId])+'&select=name&order=created_at.desc&limit=1',{
+      headers:{'apikey':SB_KEY,'Authorization':'Bearer '+currentUser._token}
+    });
+    if(res.ok){ const rows=await res.json(); if(rows[0] && rows[0].name) studentName=rows[0].name; }
+  }catch(e){}
+  document.getElementById('cert-name').textContent=studentName;
+  document.getElementById('cert-track').textContent=COURSE_NAMES[trackId];
+  document.getElementById('cert-date').textContent=new Date().toLocaleDateString('ar-EG',{year:'numeric',month:'long',day:'numeric'});
+  document.getElementById('cert-overlay').classList.add('show');
+}
+function closeCert(){ document.getElementById('cert-overlay').classList.remove('show'); }
+function printCert(){ window.print(); }
 let pendingCourse=null;
 let currentUser=null;
 function owned(id){try{return localStorage.getItem('mahara_'+id)==='1';}catch(e){return false;}}
 function setOwned(id){try{localStorage.setItem('mahara_'+id,'1');}catch(e){}}
 function refreshLocks(){Object.keys(COURSE_PRICES).forEach(function(id){var lock=document.getElementById('lock-'+id);if(!lock)return;if(owned(id)){lock.classList.add('owned');lock.innerHTML='<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> <span class="now">مفتوح</span>';}});}
 function tryOpen(id){
-  if(owned(id)){openCourse(id);}
+  if(owned(id)){openCourse(id);verifyOwnership(id);}
   else if(!currentUser){pendingCourse=id;openAuth('signup');}
   else{openBuy(id);}
 }
