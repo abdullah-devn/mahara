@@ -639,6 +639,25 @@ body.light{
 /* purchase overlay */
 .buy-ov{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:300;display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:30px 14px}
 .buy-ov.open{display:flex}
+.pf-top{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.pf-avatar{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#39d353,#2ea043);display:grid;place-items:center;color:#0d1117;font-weight:700;font-size:1.5rem;flex:none}
+.pf-info{min-width:0}
+.pf-email{font-size:.92rem;font-weight:600;color:var(--text);direction:ltr;text-align:right;word-break:break-all}
+.pf-meta{font-size:.78rem;color:var(--muted);margin-top:3px}
+.pf-stats{display:flex;gap:12px;margin-bottom:20px}
+.pf-stat{flex:1;background:var(--bg3);border:1px solid var(--line);border-radius:10px;padding:14px;text-align:center}
+.pf-num{font-size:1.6rem;font-weight:700;color:var(--green);line-height:1}
+.pf-lbl{font-size:.74rem;color:var(--muted);margin-top:5px}
+.pf-sec-title{font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:10px}
+.pf-courses{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.pf-course{display:flex;align-items:center;gap:10px;background:var(--bg3);border:1px solid var(--line);border-radius:9px;padding:11px 14px}
+.pf-course svg{width:17px;height:17px;color:var(--green);flex:none}
+.pf-course span{flex:1;font-size:.86rem;color:var(--text)}
+.pf-go{background:var(--green2);color:#fff;border:none;padding:6px 16px;border-radius:7px;font-size:.8rem;font-weight:600;cursor:pointer;font-family:inherit}
+.pf-go:hover{background:var(--green)}
+.pf-empty{background:var(--bg3);border:1px dashed var(--line);border-radius:9px;padding:18px;text-align:center;font-size:.84rem;color:var(--muted)}
+.pf-logout{width:100%;background:transparent;color:#f87171;border:1px solid #7f1d1d;padding:11px;border-radius:8px;font-size:.86rem;font-weight:600;cursor:pointer;font-family:inherit}
+.pf-logout:hover{background:#7f1d1d;color:#fff}
 .buy-card{background:var(--bg2);border:1px solid var(--line);border-radius:16px;max-width:440px;width:100%;overflow:hidden;margin:auto}
 .buy-hd{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
 .buy-hd h3{font-size:1.05rem;font-weight:700;color:var(--text)}
@@ -705,6 +724,7 @@ body.light{
  <div class="nav-logo">مِهارة</div>
  <div class="nav-right">
  <button class="about-btn" onclick="openAbout()" title="عن المنصة">عن المنصة</button>
+ <button id="authNavBtn" onclick="openAuth()" style="background:#238636;color:#fff;border:none;padding:7px 14px;border-radius:8px;cursor:pointer;font-size:.82rem;font-weight:600;font-family:inherit">دخول / تسجيل</button>
  <button class="theme-btn" onclick="toggleTheme()" id="theme-btn" title="تبديل الثيم">
   <svg id="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
   <svg id="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -764,7 +784,7 @@ body.light{
  <span>8 دروس</span>
  </div>
  </div>
- <div class="tr-lock" id="lock-web" data-price="500"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">500 أوقية</span> <span class="old">1500</span></div>
+ <div class="tr-lock" id="lock-web" data-price="1000"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">1000 أوقية</span> <span class="old">2000</span></div>
  <div class="tr-arrow">&#8592;</div>
  </div>
 
@@ -777,7 +797,7 @@ body.light{
  <span>7 دروس</span>
  </div>
  </div>
- <div class="tr-lock" id="lock-app" data-price="500"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">500 أوقية</span> <span class="old">1500</span></div>
+ <div class="tr-lock" id="lock-app" data-price="1000"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">1000 أوقية</span> <span class="old">2000</span></div>
  <div class="tr-arrow">&#8592;</div>
  </div>
 
@@ -790,7 +810,7 @@ body.light{
  <span>7 دروس</span>
  </div>
  </div>
- <div class="tr-lock" id="lock-cyber" data-price="500"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">500 أوقية</span> <span class="old">1500</span></div>
+ <div class="tr-lock" id="lock-cyber" data-price="1000"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">1000 أوقية</span> <span class="old">2000</span></div>
  <div class="tr-arrow">&#8592;</div>
  </div>
 
@@ -803,7 +823,7 @@ body.light{
  <span>6 دروس</span>
  </div>
  </div>
- <div class="tr-lock" id="lock-ethical" data-price="500"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">500 أوقية</span> <span class="old">1500</span></div>
+ <div class="tr-lock" id="lock-ethical" data-price="1000"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">1000 أوقية</span> <span class="old">2000</span></div>
  <div class="tr-arrow">&#8592;</div>
  </div>
 
@@ -816,7 +836,7 @@ body.light{
  <span>7 دروس</span>
  </div>
  </div>
- <div class="tr-lock" id="lock-bots" data-price="300"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">300 أوقية</span> <span class="old">800</span></div>
+ <div class="tr-lock" id="lock-bots" data-price="890"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">890 أوقية</span> <span class="old">1500</span></div>
  <div class="tr-arrow">&#8592;</div>
  </div>
 
@@ -829,7 +849,7 @@ body.light{
  <span>6 دروس</span>
  </div>
  </div>
- <div class="tr-lock" id="lock-ai" data-price="500"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">500 أوقية</span> <span class="old">1500</span></div>
+ <div class="tr-lock" id="lock-ai" data-price="2000"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">2000 أوقية</span> <span class="old">3500</span></div>
  <div class="tr-arrow">&#8592;</div>
  </div>
  </div>
@@ -5224,6 +5244,31 @@ try{
 <!-- DEV DOT -->
 <div id="devDot" onclick="devTap()" style="position:fixed;bottom:8px;right:8px;width:22px;height:22px;border-radius:50%;background:transparent;z-index:95;cursor:default"></div>
 
+<!-- AUTH OVERLAY -->
+<div class="buy-ov" id="authOv">
+  <div class="buy-card">
+    <div class="buy-hd"><h3 id="authTitle">إنشاء حساب</h3><button class="buy-cl" onclick="closeAuth()">&times;</button></div>
+    <div class="buy-bd" id="authBody">
+      <div style="display:flex;gap:0;margin-bottom:20px;border-radius:8px;overflow:hidden;border:1px solid #21262d">
+        <button id="tabSignup" onclick="switchTab('signup')" style="flex:1;padding:10px;background:#238636;color:#fff;border:none;cursor:pointer;font-family:inherit;font-size:.9rem">إنشاء حساب</button>
+        <button id="tabLogin" onclick="switchTab('login')" style="flex:1;padding:10px;background:#1c2128;color:#8b949e;border:none;cursor:pointer;font-family:inherit;font-size:.9rem">تسجيل الدخول</button>
+      </div>
+      <input type="email" id="authEmail" placeholder="البريد الإلكتروني" style="width:100%;background:#1c2128;border:1px solid #21262d;color:#e6edf3;padding:10px 14px;border-radius:8px;font-size:.9rem;margin-bottom:10px;font-family:inherit;text-align:right;direction:ltr"/>
+      <input type="password" id="authPass" placeholder="كلمة المرور" style="width:100%;background:#1c2128;border:1px solid #21262d;color:#e6edf3;padding:10px 14px;border-radius:8px;font-size:.9rem;margin-bottom:10px;font-family:inherit;text-align:right"/>
+      <button class="buy-submit" id="authBtn" onclick="doAuth()">إنشاء حساب</button>
+      <div class="buy-status" id="authStatus"></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROFILE OVERLAY -->
+<div class="buy-ov" id="profileOv">
+  <div class="buy-card">
+    <div class="buy-hd"><h3>ملفي الشخصي</h3><button class="buy-cl" onclick="closeProfile()">&times;</button></div>
+    <div class="buy-bd" id="pfBody"></div>
+  </div>
+</div>
+
 <!-- PURCHASE OVERLAY -->
 <div class="buy-ov" id="buyOv">
   <div class="buy-card">
@@ -5232,10 +5277,13 @@ try{
       <div class="buy-price"><div class="now" id="buyNow">500 <small>أوقية</small></div><div class="old" id="buyOld">1500 أوقية</div></div>
       <div class="buy-steps-t">١ — حوّل المبلغ على الرقم التالي</div>
       <div class="buy-acc"><div><div class="num">26521223</div><div class="lbl">بنكيلي / مصرفي</div></div><button onclick="copyNum()">نسخ</button></div>
-      <div class="buy-steps-t">٢ — ارفع صورة إيصال الدفع</div>
+      <div class="buy-steps-t">٢ — أدخل بياناتك</div>
+      <input type="text" id="buyName" placeholder="الاسم الكامل" style="width:100%;background:#1c2128;border:1px solid #21262d;color:#e6edf3;padding:10px 14px;border-radius:8px;font-size:.9rem;margin-bottom:10px;font-family:inherit;text-align:right"/>
+      <input type="tel" id="buyPhone" placeholder="رقم الهاتف الذي أرسلت منه" style="width:100%;background:#1c2128;border:1px solid #21262d;color:#e6edf3;padding:10px 14px;border-radius:8px;font-size:.9rem;margin-bottom:10px;font-family:inherit;text-align:right;direction:ltr"/>
+      <div class="buy-steps-t">٣ — ارفع صورة إيصال الدفع</div>
       <label class="buy-up"><input type="file" id="buyReceipt" accept="image/*"><div class="t">اضغط لرفع صورة الإيصال</div><div class="s">PNG · JPG</div></label>
       <div class="buy-chosen" id="buyChosen"></div>
-      <button class="buy-submit" id="buySubmit" onclick="verifyPay()">تحقّق وافتح المسار</button>
+      <button class="buy-submit" id="buySubmit" onclick="submitPay()">إرسال طلب الاشتراك</button>
       <div class="buy-status" id="buyStatus"></div>
     </div>
   </div>
@@ -5249,38 +5297,290 @@ function devTap(){_devTaps++;clearTimeout(_devTimer);_devTimer=setTimeout(functi
 function unlockAll(){['web','app','cyber','ethical','bots','ai'].forEach(function(id){setOwned(id);});refreshLocks();alert('تم فتح جميع المسارات للمراجعة ✅');}
 function lockAll(){['web','app','cyber','ethical','bots','ai'].forEach(function(id){try{localStorage.removeItem('mahara_'+id);}catch(e){}});['web','app','cyber','ethical','bots','ai'].forEach(function(id){var lock=document.getElementById('lock-'+id);if(lock){lock.classList.remove('owned');var pr=(id==='bots'?'300':'500');var old=(id==='bots'?'800':'1500');lock.innerHTML='<svg viewBox=\'0 0 24 24\'><rect x=\'3\' y=\'11\' width=\'18\' height=\'11\' rx=\'2\'/><path d=\'M7 11V7a5 5 0 0 1 10 0v4\'/></svg> <span class=\'now\'>'+pr+' أوقية</span> <span class=\'old\'>'+old+'</span>';}});alert('تم إغلاق جميع المسارات 🔒');}
 
+// ===== SUPABASE CONFIG =====
+const SB_URL = 'https://onggoxycyevvefshjdpn.supabase.co';
+const SB_KEY = 'sb_publishable_Ld0OoZP8OM8cnetg-QiToA_1AlCFcUV';
+
+// ===== AUTH SYSTEM =====
+let authMode = 'signup';
+
+async function initAuth() {
+  try {
+    const saved = localStorage.getItem('mahara_session');
+    if (saved) {
+      const session = JSON.parse(saved);
+      if (session && session.access_token) {
+        // verify token still valid
+        let res = await fetch(SB_URL + '/auth/v1/user', {
+          headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + session.access_token }
+        });
+        // if token expired, try refreshing it
+        if (!res.ok && session.refresh_token) {
+          const rf = await fetch(SB_URL + '/auth/v1/token?grant_type=refresh_token', {
+            method: 'POST',
+            headers: { 'apikey': SB_KEY, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ refresh_token: session.refresh_token })
+          });
+          if (rf.ok) {
+            const nd = await rf.json();
+            localStorage.setItem('mahara_session', JSON.stringify({ access_token: nd.access_token, refresh_token: nd.refresh_token }));
+            session.access_token = nd.access_token;
+            res = await fetch(SB_URL + '/auth/v1/user', {
+              headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + nd.access_token }
+            });
+          }
+        }
+        if (res.ok) {
+          currentUser = await res.json();
+          currentUser._token = session.access_token;
+          await loadUserCourses();
+          updateAuthUI();
+          return;
+        }
+      }
+    }
+    localStorage.removeItem('mahara_session');
+  } catch(e) {}
+}
+
+function updateAuthUI() {
+  const btn = document.getElementById('authNavBtn');
+  if (!btn) return;
+  if (currentUser) {
+    btn.textContent = 'حسابي';
+    btn.onclick = showMyAccount;
+  } else {
+    btn.textContent = 'دخول / تسجيل';
+    btn.onclick = () => openAuth();
+  }
+}
+
+async function loadUserCourses() {
+  if (!currentUser) return;
+  try {
+    const res = await fetch(SB_URL + '/rest/v1/purchases?user_id=eq.' + currentUser.id + '&status=eq.approved&select=course', {
+      headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + currentUser._token }
+    });
+    if (res.ok) {
+      const rows = await res.json();
+      const COURSE_MAP = {
+        'إنشاء المواقع': 'web',
+        'تطبيقات الهواتف': 'app',
+        'الأمن السيبراني': 'cyber',
+        'الاختراق الأخلاقي': 'ethical',
+        'صنع البوتات': 'bots',
+        'الذكاء الاصطناعي': 'ai'
+      };
+      rows.forEach(function(r) {
+        const id = COURSE_MAP[r.course];
+        if (id) setOwned(id);
+      });
+      refreshLocks();
+    }
+  } catch(e) {}
+}
+
+function openAuth(mode) {
+  authMode = mode || 'signup';
+  switchTab(authMode);
+  document.getElementById('authEmail').value = '';
+  document.getElementById('authPass').value = '';
+  document.getElementById('authStatus').textContent = '';
+  document.getElementById('authOv').classList.add('open');
+}
+
+function closeAuth() { document.getElementById('authOv').classList.remove('open'); }
+
+function switchTab(mode) {
+  authMode = mode;
+  const s = document.getElementById('tabSignup');
+  const l = document.getElementById('tabLogin');
+  const btn = document.getElementById('authBtn');
+  const title = document.getElementById('authTitle');
+  if (mode === 'signup') {
+    s.style.background = '#238636'; s.style.color = '#fff';
+    l.style.background = '#1c2128'; l.style.color = '#8b949e';
+    btn.textContent = 'إنشاء حساب';
+    title.textContent = 'إنشاء حساب';
+  } else {
+    l.style.background = '#238636'; l.style.color = '#fff';
+    s.style.background = '#1c2128'; s.style.color = '#8b949e';
+    btn.textContent = 'تسجيل الدخول';
+    title.textContent = 'تسجيل الدخول';
+  }
+}
+
+async function doAuth() {
+  const email = document.getElementById('authEmail').value.trim();
+  const pass = document.getElementById('authPass').value;
+  const st = document.getElementById('authStatus');
+  const btn = document.getElementById('authBtn');
+
+  if (!email || !pass) { st.innerHTML = '<div style="color:#f87171">يرجى تعبئة جميع الحقول</div>'; return; }
+  if (pass.length < 6) { st.innerHTML = '<div style="color:#f87171">كلمة المرور يجب أن تكون 6 أحرف على الأقل</div>'; return; }
+
+  btn.disabled = true;
+  st.innerHTML = '<div style="color:#8b949e">جاري المعالجة...</div>';
+
+  const endpoint = authMode === 'signup' ? '/auth/v1/signup' : '/auth/v1/token?grant_type=password';
+
+  try {
+    const res = await fetch(SB_URL + endpoint, {
+      method: 'POST',
+      headers: { 'apikey': SB_KEY, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password: pass })
+    });
+    const data = await res.json();
+
+    if (data.access_token) {
+      localStorage.setItem('mahara_session', JSON.stringify({ access_token: data.access_token, refresh_token: data.refresh_token }));
+      currentUser = data.user;
+      currentUser._token = data.access_token;
+      await loadUserCourses();
+      updateAuthUI();
+      closeAuth();
+      if (pendingCourse) {
+        setTimeout(() => openBuy(null), 300);
+      }
+    } else if (data.error === 'User already registered') {
+      st.innerHTML = '<div style="color:#f87171">البريد مسجل مسبقاً، جرب تسجيل الدخول</div>';
+    } else if (data.error === 'Invalid login credentials') {
+      st.innerHTML = '<div style="color:#f87171">البريد أو كلمة المرور غير صحيحة</div>';
+    } else {
+      st.innerHTML = '<div style="color:#f87171">' + (data.msg || data.error || 'حدث خطأ') + '</div>';
+    }
+  } catch(e) {
+    st.innerHTML = '<div style="color:#f87171">خطأ في الاتصال</div>';
+  }
+  btn.disabled = false;
+}
+
+function showMyAccount() {
+  if (!currentUser) return;
+  const email = currentUser.email;
+  const ids = ['web','app','cyber','ethical','bots','ai'];
+  const ownedList = ids.filter(id => owned(id));
+  const initial = (email || 'M').trim().charAt(0).toUpperCase();
+  let coursesHtml;
+  if (ownedList.length) {
+    coursesHtml = ownedList.map(id =>
+      '<div class="pf-course"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>'+COURSE_NAMES[id]+'</span><button class="pf-go" onclick="closeProfile();openCourse(\''+id+'\')">ادخل</button></div>'
+    ).join('');
+  } else {
+    coursesHtml = '<div class="pf-empty">لم تشترك في أي مسار بعد. تصفّح المسارات وابدأ رحلتك.</div>';
+  }
+  const ov = document.getElementById('profileOv');
+  document.getElementById('pfBody').innerHTML =
+    '<div class="pf-top"><div class="pf-avatar">'+initial+'</div>'+
+    '<div class="pf-info"><div class="pf-email">'+email+'</div>'+
+    '<div class="pf-meta">طالب في منصة مهارة</div></div></div>'+
+    '<div class="pf-stats"><div class="pf-stat"><div class="pf-num">'+ownedList.length+'</div><div class="pf-lbl">مساراتي</div></div>'+
+    '<div class="pf-stat"><div class="pf-num">'+(6-ownedList.length)+'</div><div class="pf-lbl">متاح للاشتراك</div></div></div>'+
+    '<div class="pf-sec-title">المسارات المفتوحة</div>'+
+    '<div class="pf-courses">'+coursesHtml+'</div>'+
+    '<button class="pf-logout" onclick="doLogout()">تسجيل الخروج</button>';
+  ov.classList.add('open');
+}
+function closeProfile(){ document.getElementById('profileOv').classList.remove('open'); }
+function doLogout(){
+  localStorage.removeItem('mahara_session');
+  ['web','app','cyber','ethical','bots','ai'].forEach(id => { try{ localStorage.removeItem('mahara_'+id); }catch(e){} });
+  currentUser = null;
+  refreshLocks();
+  updateAuthUI();
+  closeProfile();
+}
+
 // ===== ACCESS SYSTEM =====
-const API_KEY=['sk-ant-','api03-AR4iNYtFuoDsrXmH0zNFTFdky_qbHCy5_JxM2TmiX5FhTqxe7PK1FjbNL0Z6jbzbu26RWBC1wqXUYRjtI_FIaA-7PNF6wAA'].join('');
-const COURSE_PRICES={web:500,app:500,cyber:500,ethical:500,ai:500,bots:300};
+const COURSE_PRICES={web:1000,app:1000,cyber:1000,ethical:1000,ai:2000,bots:890};
 const COURSE_NAMES={web:'إنشاء المواقع',app:'تطبيقات الهواتف',cyber:'الأمن السيبراني',ethical:'الاختراق الأخلاقي',bots:'صنع البوتات',ai:'الذكاء الاصطناعي'};
 let pendingCourse=null;
+let currentUser=null;
 function owned(id){try{return localStorage.getItem('mahara_'+id)==='1';}catch(e){return false;}}
 function setOwned(id){try{localStorage.setItem('mahara_'+id,'1');}catch(e){}}
 function refreshLocks(){Object.keys(COURSE_PRICES).forEach(function(id){var lock=document.getElementById('lock-'+id);if(!lock)return;if(owned(id)){lock.classList.add('owned');lock.innerHTML='<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> <span class="now">مفتوح</span>';}});}
-function tryOpen(id){if(owned(id)){openCourse(id);}else{openBuy(id);}}
-function openBuy(id){pendingCourse=id;var price=COURSE_PRICES[id],old=(id==='bots'?800:1500);document.getElementById('buyTitle').textContent='شراء مسار: '+COURSE_NAMES[id];document.getElementById('buyNow').innerHTML=price+' <small>أوقية</small>';document.getElementById('buyOld').textContent=old+' أوقية';document.getElementById('buyReceipt').value='';document.getElementById('buyChosen').textContent='';document.getElementById('buyStatus').textContent='';document.getElementById('buySubmit').disabled=false;document.getElementById('buyOv').classList.add('open');}
+function tryOpen(id){
+  if(owned(id)){openCourse(id);}
+  else if(!currentUser){pendingCourse=id;openAuth('signup');}
+  else{openBuy(id);}
+}
+function openBuy(id){
+  if(id) pendingCourse=id;
+  var cid=pendingCourse;
+  var price=COURSE_PRICES[cid],oldPrice=(cid==='bots'?1500:(cid==='ai'?3500:2000));
+  document.getElementById('buyTitle').textContent='شراء مسار: '+COURSE_NAMES[cid];
+  document.getElementById('buyNow').innerHTML=price+' <small>أوقية</small>';
+  document.getElementById('buyOld').textContent=oldPrice+' أوقية';
+  document.getElementById('buyReceipt').value='';
+  document.getElementById('buyChosen').textContent='';
+  document.getElementById('buyStatus').textContent='';
+  document.getElementById('buyName').value='';
+  document.getElementById('buyPhone').value='';
+  document.getElementById('buySubmit').disabled=false;
+  document.getElementById('buyOv').classList.add('open');
+}
 function closeBuy(){document.getElementById('buyOv').classList.remove('open');}
 function copyNum(){try{navigator.clipboard.writeText('26521223');event.target.textContent='تم';setTimeout(function(){event.target.textContent='نسخ';},1500);}catch(e){}}
 document.addEventListener('change',function(e){if(e.target&&e.target.id==='buyReceipt'){document.getElementById('buyChosen').textContent=e.target.files[0]?('تم اختيار: '+e.target.files[0].name):'';}});
-async function verifyPay(){
+
+async function submitPay(){
+  var name=document.getElementById('buyName').value.trim();
+  var phone=document.getElementById('buyPhone').value.trim();
   var file=document.getElementById('buyReceipt').files[0];
-  if(!file){alert('يرجى رفع صورة إيصال الدفع');return;}
-  var price=COURSE_PRICES[pendingCourse];
   var sub=document.getElementById('buySubmit'),st=document.getElementById('buyStatus');
-  sub.disabled=true;st.innerHTML='<div class="buy-spin"></div><div style="margin-top:10px">جاري قراءة الإيصال...</div>';
-  var base64=await new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(r.result.split(',')[1]);};r.onerror=rej;r.readAsDataURL(file);});
-  var mediaType=file.type||'image/jpeg';
-  var nowStr=new Date().toLocaleString('ar',{year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Africa/Nouakchott'});
-  var prompt='أنت نظام تحقق دقيق وصارم من إيصالات الدفع الإلكترونية الموريتانية (بنكيلي، مصرفي، سداد وغيرها).\n\nالوقت الحالي بالضبط: '+nowStr+' (بتوقيت نواكشوط).\nالمبلغ المطلوب: '+price+' أوقية موريتانية جديدة.\nالرقم المستلِم الصحيح: 26521223.\n\nشكل الإيصال يختلف من تطبيق لآخر، فلا تعتمد على الشكل بل ابحث عن الجوهر: المبلغ المحوّل، تاريخ ووقت العملية، ورقم المستلِم.\n\nافحص الصورة وأجب بصيغة JSON فقط بدون أي نص إضافي:\n{"accepted":true او false,"reason":"سبب مختصر بالعربية"}\n\nاقبل فقط إذا تحققت كل الشروط: المبلغ يساوي '+price+' أوقية بالضبط، ورقم المستلِم 26521223، ووقت العملية ضمن 20 دقيقة قبل الوقت الحالي أو بعده. أي إيصال أقدم من ذلك بدقيقة فأكثر يُرفض. وارفض إن كان المبلغ مختلفاً أو الرقم غير صحيح أو الصورة غير واضحة أو ليست إيصالاً.';
+
+  if(!name){st.innerHTML='<div style="color:#f87171">يرجى إدخال اسمك الكامل</div>';return;}
+  if(!phone){st.innerHTML='<div style="color:#f87171">يرجى إدخال رقم هاتفك</div>';return;}
+  if(!file){st.innerHTML='<div style="color:#f87171">يرجى رفع صورة إيصال الدفع</div>';return;}
+
+  sub.disabled=true;
+  st.innerHTML='<div class="buy-spin"></div><div style="margin-top:10px">جاري إرسال طلبك...</div>';
+
   try{
-    st.innerHTML='<div class="buy-spin"></div><div style="margin-top:10px">جاري التحقق من المبلغ والتاريخ...</div>';
-    var resp=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-opus-4-5',max_tokens:300,messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mediaType,data:base64}},{type:'text',text:prompt}]}]})});
-    var data=await resp.json();
-    var raw=data.content[0].text.trim().replace(/```json|```/g,'').trim();
-    var result=JSON.parse(raw);
-    if(result.accepted){setOwned(pendingCourse);document.getElementById('buyBody').innerHTML='<div class="buy-ok"><div class="ic"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><h4>تم فتح المسار بنجاح</h4><p>مبارك! يمكنك الآن البدء في دروس المسار.</p><button class="buy-submit" onclick="afterBuy()">ابدأ التعلّم الآن</button></div>';}
-    else{sub.disabled=false;st.innerHTML='<div style="color:#f87171">'+(result.reason||'لم يتم قبول الإيصال')+'</div>';}
-  }catch(err){sub.disabled=false;st.innerHTML='<div style="color:#f87171">حدث خطأ، تأكد من وضوح الصورة وحاول مجدداً.</div>';}
+    // 1. رفع الصورة لـ Storage
+    var ext=file.name.split('.').pop();
+    var fileName=Date.now()+'-'+Math.random().toString(36).substr(2,6)+'.'+ext;
+    var cType=file.type||'image/jpeg';
+    var uploadRes=await fetch(SB_URL+'/storage/v1/object/receipts/public/'+fileName,{
+      method:'POST',
+      headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':cType},
+      body:file
+    });
+
+    if(!uploadRes.ok){
+      var errText = await uploadRes.text();
+      throw new Error('فشل رفع الصورة: ' + uploadRes.status + ' - ' + errText);
+    }
+    var receiptUrl=SB_URL+'/storage/v1/object/public/receipts/public/'+fileName;
+
+    // 2. حفظ البيانات في جدول purchases
+    var insertRes=await fetch(SB_URL+'/rest/v1/purchases',{
+      method:'POST',
+      headers:{
+        'apikey':SB_KEY,
+        'Authorization':'Bearer '+SB_KEY,
+        'Content-Type':'application/json',
+        'Prefer':'return=minimal'
+      },
+      body:JSON.stringify({
+        name:name,
+        phone:phone,
+        course:COURSE_NAMES[pendingCourse],
+        receipt_url:receiptUrl,
+        status:'pending',
+        user_id:currentUser ? currentUser.id : null
+      })
+    });
+
+    if(!insertRes.ok){throw new Error('فشل حفظ البيانات');}
+
+    // 3. رسالة النجاح
+    document.getElementById('buyBody').innerHTML='<div class="buy-ok"><div class="ic"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><h4>تم إرسال طلبك بنجاح!</h4><p>سيتم مراجعة طلبك وفتح المسار لك خلال وقت قصير.<br>شكراً لك، '+name+'!</p></div>';
+
+  }catch(err){
+    sub.disabled=false;
+    st.innerHTML='<div style="color:#f87171">حدث خطأ: '+err.message+'</div>';
+  }
 }
 function afterBuy(){closeBuy();refreshLocks();openCourse(pendingCourse);}
 
@@ -5290,7 +5590,16 @@ function closeAbout(){document.getElementById('about-pg').classList.remove('show
 function openLegal(which){document.getElementById('home-pg').classList.add('hide');document.querySelectorAll('.course-pg,.about-pg,.legal-pg').forEach(function(p){p.classList.remove('show');});var el=document.getElementById('legal-'+which);if(el)el.classList.add('show');window.scrollTo(0,0);}
 function closeLegal(){document.querySelectorAll('.legal-pg').forEach(function(p){p.classList.remove('show');});document.getElementById('home-pg').classList.remove('hide');window.scrollTo(0,0);}
 
-window.addEventListener('load',refreshLocks);
+async function trackVisit(){
+  try{
+    await fetch(SB_URL + '/rest/v1/visits', {
+      method: 'POST',
+      headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+      body: JSON.stringify({})
+    });
+  }catch(e){}
+}
+window.addEventListener('load',function(){ initAuth(); refreshLocks(); trackVisit(); });
 </script>
 
 </body>
