@@ -6,15 +6,22 @@
 <title>مِهارة — تعلّم التقنية بالعربية وابنِ مستقبلك</title>
 <meta name="description" content="منصة مِهارة التعليمية: تعلّم إنشاء المواقع، تطبيقات الهواتف، الأمن السيبراني، الاختراق الأخلاقي، صنع البوتات والذكاء الاصطناعي بأسلوب عملي بالعربية، مع مشروع حقيقي وشهادة إتمام لكل مسار.">
 <meta name="theme-color" content="#0d1117">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232ea043'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%230d1117' font-family='sans-serif' font-weight='bold'%3E%D9%85%D9%90%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1117'/%3E%3Ccircle cx='32' cy='32' r='25' fill='none' stroke='%2339d353' stroke-width='3'/%3E%3Ctext x='32' y='40' font-size='20' text-anchor='middle' fill='%2339d353' font-family='monospace' font-weight='bold'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:title" content="مِهارة — تعلّم التقنية بالعربية">
 <meta property="og:description" content="مسارات عملية بالعربية: مواقع، تطبيقات، أمن سيبراني، اختراق أخلاقي، بوتات، وذكاء اصطناعي — مع مشروع حقيقي وشهادة لكل مسار.">
 <meta property="og:locale" content="ar_AR">
+<meta property="og:url" content="https://abdullah-devn.github.io/mahara/">
+<meta property="og:site_name" content="مِهارة">
+<meta property="og:image" content="https://abdullah-devn.github.io/mahara/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="مِهارة — تعلّم التقنية بالعربية">
 <meta name="twitter:description" content="مسارات تقنية عملية بالعربية مع مشروع حقيقي وشهادة لكل مسار.">
+<meta name="twitter:image" content="https://abdullah-devn.github.io/mahara/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style id="critical-splash">
@@ -25,6 +32,12 @@
 #splash .sp-bar::before{content:"";position:absolute;top:0;left:-45%;height:100%;width:45%;background:#39d353;border-radius:3px;animation:sp-slide 1s infinite ease-in-out}
 #splash .sp-sub{font-size:.68rem;letter-spacing:.34em;color:#5b6470}
 @keyframes sp-slide{0%{left:-45%}100%{left:115%}}
+.art{width:100%;height:100%;display:grid;place-items:center;position:relative;overflow:hidden}
+.trust-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:780px;margin:22px auto 4px;padding:0 16px}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:.8rem;font-weight:500;color:var(--text);background:var(--bg3);border:1px solid var(--line);border-radius:30px;padding:9px 16px}
+.trust-item svg{width:16px;height:16px;color:var(--green);flex:none}.tr-thumb .art svg{width:40px;height:40px;opacity:.95}.course-banner .art svg{width:76px;height:76px;opacity:.95}
+.tracks-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:780px;margin:0 auto;padding:0 4px}.track-card{background:var(--bg2);border:1px solid var(--line);border-radius:16px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}.track-card:hover{transform:translateY(-3px);border-color:var(--green)}.tc-thumb{width:100%;height:118px;overflow:hidden;background:linear-gradient(140deg,#101a26,#0a0e14)}.tc-thumb img{width:100%;height:100%;object-fit:cover}.tc-body{padding:12px 13px 13px;display:flex;flex-direction:column;gap:9px;flex:1}.tc-title{font-size:.92rem;font-weight:700;color:var(--text);line-height:1.35}.tc-meta{display:flex;align-items:center;gap:8px;font-size:.72rem;color:var(--muted);flex-wrap:wrap}.track-card .tr-lock{margin-top:auto}@media(max-width:360px){.tracks-grid{grid-template-columns:1fr}}
+.track-card,.soc-card,.svc-btn,.hero-cta,.nav-tg,.about-btn,.tr-lock,button,a{-webkit-tap-highlight-color:transparent}.track-card:active,.soc-card:active{transform:scale(.985)}.svc-btn:active,.nav-tg:active,.hero-cta:active,.about-btn:active,.theme-btn:active,#authNavBtn:active{transform:scale(.95)}.about-btn,#authNavBtn{transition:transform .12s ease,border-color .2s,color .2s}
 </style>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -78,11 +91,9 @@ body.light{
  justify-content:space-between;
  gap:12px;
 }
-.nav-logo{
- font-size:1rem;font-weight:700;
- color:var(--green);letter-spacing:.02em;
- flex-shrink:0;
-}
+.nav-logo{display:flex;align-items:center;gap:6px;font-size:1.05rem;font-weight:700;color:var(--green);letter-spacing:.02em;flex-shrink:0}
+.nav-logo-ic{width:23px;height:23px;flex:none}
+.nav-logo-ic svg{width:23px;height:23px}
 .nav-right{display:flex;align-items:center;gap:8px}
 
 .theme-btn{
@@ -132,11 +143,13 @@ body.light{
 }
 
 .hero-nums{
- display:flex;gap:24px;margin-bottom:28px;
+ display:flex;gap:10px;margin-bottom:26px;flex-wrap:wrap;
 }
-.hn{text-align:center}
-.hn-val{font-size:1.3rem;font-weight:700;color:var(--green);display:block;line-height:1}
-.hn-lab{font-size:.7rem;color:var(--muted);margin-top:3px;letter-spacing:.04em}
+.hn{flex:1;min-width:92px;background:var(--bg3);border:1px solid var(--line);border-radius:14px;padding:13px 8px;text-align:center}
+.hn-ic{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;margin:0 auto 7px}
+.hn-ic svg{width:18px;height:18px}
+.hn-val{font-size:1.5rem;font-weight:700;color:var(--green);display:block;line-height:1}
+.hn-lab{font-size:.72rem;color:var(--muted);margin-top:4px;letter-spacing:.04em}
 
 .hero-actions{display:flex;gap:8px;flex-wrap:wrap}
 .btn-g{
@@ -525,61 +538,54 @@ body.light{
   font-size:1rem;color:#333;display:flex;align-items:center;justify-content:center;
 }
 .cert-inner{
-  padding:36px 30px 30px;
+  padding:18px;
   text-align:center;
-  color:#1a1a1a;
+  color:#1a2e1f;
   font-family:'IBM Plex Sans Arabic',sans-serif;
-  background:
-    radial-gradient(circle at 12% 8%, rgba(46,160,67,.05), transparent 22%),
-    radial-gradient(circle at 88% 92%, rgba(46,160,67,.05), transparent 22%),
-    #fdfdfb;
+  background:#f6f4ec;
+}
+.cert-frame{
+  border:7px solid #2f7d33;
+  padding:6px;
+  background:#2f7d33;
 }
 .cert-border{
-  border:1px solid #d8d8cf;
-  outline:3px double #2ea043;
-  outline-offset:5px;
-  padding:34px 26px 28px;
+  border:1.5px solid #2f7d33;
+  padding:30px 24px 24px;
   position:relative;
-  background:linear-gradient(#fff,#fcfcf8);
+  background:
+    radial-gradient(circle at 10% 6%, rgba(47,125,51,.05), transparent 26%),
+    radial-gradient(circle at 90% 94%, rgba(47,125,51,.05), transparent 26%),
+    linear-gradient(#ffffff,#fcfdf8);
 }
-.cert-border::before,.cert-border::after{
-  content:'';position:absolute;
-  width:22px;height:22px;
-  border-color:#2ea043;border-style:solid;
-}
-.cert-border::before{top:-8px;right:-8px;border-width:2px 2px 0 0}
-.cert-border::after{bottom:-8px;left:-8px;border-width:0 0 2px 2px}
-.cert-logo{font-size:1.25rem;font-weight:700;color:#2ea043;margin-bottom:4px;letter-spacing:.04em}
-.cert-logo-sub{font-size:.6rem;letter-spacing:.32em;color:#b3b3a8;text-transform:uppercase;margin-bottom:18px}
-.cert-heading{font-size:.7rem;letter-spacing:.34em;color:#9a9a8e;text-transform:uppercase;margin-bottom:14px}
-.cert-name{font-size:1.7rem;font-weight:700;color:#15301d;margin:0 auto 14px;padding-bottom:14px;max-width:80%;border-bottom:2px solid #2ea043;font-family:'Amiri','IBM Plex Sans Arabic',serif}
-.cert-body{font-size:.8rem;color:#555;line-height:1.85;margin-bottom:16px}
-.cert-track{display:inline-block;font-size:1.05rem;font-weight:700;color:#15301d;margin-bottom:18px;padding:5px 18px;background:rgba(46,160,67,.08);border-radius:30px}
-.cert-footer{display:flex;justify-content:space-between;align-items:flex-end;margin-top:18px;padding-top:14px;gap:8px}
-.cert-sig{text-align:center;flex:1}
-.cert-sig-mark{font-family:'Amiri',serif;font-size:1.7rem;color:#15301d;line-height:1;font-style:italic;font-weight:700;transform:rotate(-6deg);margin-bottom:2px}
-.cert-sig-line{width:88%;max-width:120px;height:1px;background:#9a9a8e;margin:0 auto 6px}
-.cert-sig span{font-size:.62rem;color:#9a9a8e;letter-spacing:.1em;text-transform:uppercase}
-.cert-date{font-size:.7rem;color:#888}
-/* SEAL / STAMP */
-.cert-seal{
-  position:absolute;bottom:46px;left:50%;transform:translateX(-50%) rotate(-9deg);
-  width:88px;height:88px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  border:2px solid #2ea043;
-  box-shadow:inset 0 0 0 4px rgba(46,160,67,.18);
-  opacity:.92;
-  pointer-events:none;
-}
-.cert-seal::before{
-  content:'';position:absolute;inset:8px;border-radius:50%;
-  border:1px dashed rgba(46,160,67,.5);
-}
-.cert-seal-core{font-family:'Amiri',serif;font-weight:700;font-size:1.5rem;color:#2ea043;line-height:1}
-.cert-seal-ring{
-  position:absolute;inset:0;
-  font-size:.5rem;letter-spacing:.05em;color:#2ea043;font-weight:600;
-}
+.cert-logo{font-family:'Amiri',serif;font-size:2rem;font-weight:700;color:#236b29;line-height:1;margin-bottom:2px}
+.cert-logo-sub{font-size:1rem;font-weight:700;letter-spacing:.32em;color:#2f7d33;margin-bottom:2px}
+.cert-logo-tag{font-size:.54rem;letter-spacing:.12em;color:#9a9a8e;text-transform:uppercase;margin-bottom:14px}
+.cert-rule{width:46%;max-width:200px;height:2px;margin:0 auto 14px;background:linear-gradient(90deg,transparent,#2f7d33,transparent)}
+.cert-heading{font-family:'Amiri',serif;font-size:1.5rem;font-weight:700;color:#1f5e23;margin-bottom:16px}
+.cert-intro{font-size:.78rem;color:#555;margin-bottom:8px}
+.cert-name{font-size:1.5rem;font-weight:700;color:#15301d;margin:0 auto 14px;padding-bottom:12px;max-width:82%;border-bottom:2px solid #2f7d33;font-family:'Amiri','IBM Plex Sans Arabic',serif}
+.cert-course-lbl{font-size:.78rem;color:#555;margin-bottom:8px}
+.cert-track{display:inline-block;font-size:1.05rem;font-weight:700;color:#15301d;margin-bottom:10px;padding:5px 20px;background:rgba(47,125,51,.08);border-radius:30px}
+.cert-period{font-size:.66rem;color:#888;margin-bottom:8px;line-height:1.7}
+.cert-footer{display:flex;justify-content:space-between;align-items:flex-end;margin-top:14px;gap:6px}
+.cert-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px}
+.cert-sig-line{width:90%;max-width:130px;height:1px;background:#3a3a30;margin:14px auto 5px}
+.cert-sig-t{font-size:.62rem;color:#444;font-weight:600}
+.cert-sig-s{font-size:.56rem;color:#999}
+.cert-meta{font-size:.56rem;color:#777;line-height:1.9;text-align:center}
+.cert-meta b{color:#15301d;font-weight:700}
+/* OFFICIAL SEAL */
+.cert-seal{width:92px;height:92px;border-radius:50%;position:relative;
+  background:radial-gradient(circle at 36% 30%,#56b85b,#1b5e20 75%);
+  border:2px solid #14491a;
+  box-shadow:0 4px 10px rgba(0,0,0,.22),inset 0 0 0 4px rgba(255,255,255,.14);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;color:#fff}
+.cert-seal::before{content:'';position:absolute;inset:8px;border-radius:50%;border:1px dashed rgba(255,255,255,.55)}
+.cert-seal::after{content:'';position:absolute;bottom:-9px;left:50%;transform:translateX(-50%);
+  width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-top:13px solid #1b5e20}
+.cert-seal-name{font-family:'Amiri',serif;font-weight:700;font-size:1rem;line-height:1;position:relative}
+.cert-seal-sub{font-size:.4rem;letter-spacing:.05em;opacity:.92;position:relative}
 @media print{
   .cert-actions,.cert-close{display:none!important}
   .cert-overlay{position:static;background:#fff;padding:0}
@@ -649,7 +655,7 @@ body.light{
 .tr-thumb{width:54px;height:54px;min-width:54px;border-radius:10px;overflow:hidden;position:relative;background:var(--bg3)}
 .tr-thumb img{width:100%;height:100%;object-fit:cover;opacity:.9}
 .tr-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(13,17,23,.3))}
-.course-banner{width:100%;height:160px;border-radius:14px;overflow:hidden;position:relative;margin-bottom:18px;border:1px solid var(--line)}
+.course-banner{width:100%;height:160px;border-radius:14px;overflow:hidden;position:relative;margin-bottom:18px;border:1px solid var(--line);background:linear-gradient(140deg,#101a26,#0a0e14)}
 .course-banner img{width:100%;height:100%;object-fit:cover}
 .course-banner::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(57,211,83,.08) 0%,transparent 35%,rgba(13,17,23,.88))}
 
@@ -670,7 +676,7 @@ body.light{
 .lp-inner h4.step-h{font-size:.98rem;font-weight:700;color:var(--text);margin:20px 0 10px;padding-right:13px;border-right:3px solid var(--green)}
 /* hero bg + about */
 .home-hero{position:relative;overflow:hidden}
-.hero-bg-img{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1200&q=70") center/cover;opacity:.14;z-index:0}
+.hero-bg-img{position:absolute;inset:0;z-index:0;opacity:.14;background:url("https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1200&q=70") center/cover}
 .hero-inner-c{position:relative;z-index:1}
 .about-sec{padding:40px 16px;border-top:1px solid var(--line);background:var(--bg2)}
 .about-h{text-align:center;max-width:540px;margin:0 auto 26px}
@@ -680,8 +686,11 @@ body.light{
 .about-mini{display:flex;flex-direction:column;gap:8px;max-width:430px;margin:0 auto}
 .mini{display:flex;align-items:center;gap:12px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:13px 16px;font-size:.85rem;color:var(--text);font-weight:500}
 .mini svg{width:19px;height:19px;stroke:var(--green);flex-shrink:0}
-.about-btn{background:var(--bg3);border:1px solid var(--line);color:var(--text);font-family:inherit;font-size:.78rem;font-weight:600;padding:7px 13px;border-radius:7px;cursor:pointer;transition:.2s}
-.about-btn:hover{border-color:var(--green);color:var(--green)}
+.about-btn{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:inherit;font-size:.78rem;font-weight:600;padding:7px 12px;border-radius:8px;cursor:pointer;transition:.2s;white-space:nowrap}
+.about-btn:hover{border-color:var(--green);color:var(--text)}
+.auth-btn{background:rgba(46,160,67,.1);border:1px solid var(--green);color:var(--green);font-family:inherit;font-size:.78rem;font-weight:700;padding:7px 14px;border-radius:8px;cursor:pointer;white-space:nowrap;transition:transform .12s ease,background .2s}
+.auth-btn:hover{background:rgba(46,160,67,.18)}
+.auth-btn:active{transform:scale(.95)}
 /* pricing lock */
 .tr-lock{display:inline-flex;align-items:center;gap:5px;font-size:.66rem;color:var(--muted2);background:var(--bg3);border:1px solid var(--line);padding:3px 9px;border-radius:50px;margin-top:6px}
 .tr-lock svg{width:11px;height:11px;stroke:var(--muted2);fill:none;stroke-width:2}
@@ -766,6 +775,19 @@ body.light{
 .apb-list li{padding:7px 0;padding-right:26px;position:relative;font-size:.88rem;color:var(--text);line-height:1.7}
 .apb-list li::before{content:'';position:absolute;right:0;top:13px;width:7px;height:7px;border-radius:50%;background:var(--green)}
 @media(max-width:480px){.contact-grid{grid-template-columns:1fr}}
+.soc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:700px;margin:0 auto;padding:0 4px}
+.soc-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:5px;border-radius:15px;padding:14px 8px 12px;color:#fff;text-decoration:none;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.soc-card:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(0,0,0,.35)}
+.soc-ic{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center}
+.soc-ic svg{width:20px;height:20px}
+.soc-name{font-size:.83rem;font-weight:700}
+.soc-handle{font-size:.62rem;opacity:.92;direction:ltr;word-break:break-all;line-height:1.3;min-height:1.6em}
+.soc-btn{margin-top:2px;font-size:.64rem;font-weight:600;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.28);padding:5px 12px;border-radius:20px}
+.soc-wa{background:linear-gradient(160deg,#2bd366,#0e9f6e)}
+.soc-mail{background:linear-gradient(160deg,#64748b,#3a4658)}
+.soc-ig{background:linear-gradient(150deg,#833ab4,#e1306c 55%,#f9a825)}
+.soc-tt{background:linear-gradient(160deg,#222,#000);border:1px solid #2a2f3a}
+@media(max-width:560px){.soc-grid{grid-template-columns:1fr 1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
 .code-box .c-tag{color:#e57373}.code-box .c-attr{color:#81d4fa}.code-box .c-val{color:#a5d6a7}.code-box .c-prop{color:#ce93d8}.code-box .c-com{color:#6a737d;font-style:italic}
@@ -883,10 +905,10 @@ body.light{
 
 <!-- NAV -->
 <nav class="nav">
- <div class="nav-logo">مِهارة</div>
+ <div class="nav-logo"><span class="nav-logo-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#39d353" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><polyline points="13.7 9 16.5 12 13.7 15"/><polyline points="10.3 9 7.5 12 10.3 15"/></svg></span>مِهارة</div>
  <div class="nav-right">
  <button class="about-btn" onclick="openAbout()" title="عن المنصة">عن المنصة</button>
- <button id="authNavBtn" onclick="openAuth()" style="background:#238636;color:#fff;border:none;padding:7px 14px;border-radius:8px;cursor:pointer;font-size:.82rem;font-weight:600;font-family:inherit">دخول / تسجيل</button>
+ <button id="authNavBtn" onclick="openAuth()" class="auth-btn">دخول / تسجيل</button>
  <button class="theme-btn" onclick="toggleTheme()" id="theme-btn" title="تبديل الثيم">
   <svg id="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
   <svg id="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -909,9 +931,9 @@ body.light{
  <h1>تعلّم التقنية<br>وابنِ مستقبلك</h1>
  <p>ستة مسارات تقنية احترافية بأسلوب عملي مبسّط، ومشروع حقيقي تنشره في نهاية كل مسار، وشهادة إتمام — تتعلّم بالوتيرة التي تناسبك.</p>
  <div class="hero-nums">
- <div class="hn"><span class="hn-val">6</span><div class="hn-lab">مسارات</div></div>
- <div class="hn"><span class="hn-val">+40</span><div class="hn-lab">درساً</div></div>
- <div class="hn"><span class="hn-val">6</span><div class="hn-lab">شهادات</div></div>
+ <div class="hn"><div class="hn-ic" style="background:rgba(57,211,83,.13)"><svg viewBox="0 0 24 24" fill="none" stroke="#39d353" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><span class="hn-val">6</span><div class="hn-lab">مسارات</div></div>
+ <div class="hn"><div class="hn-ic" style="background:rgba(88,166,255,.13)"><svg viewBox="0 0 24 24" fill="none" stroke="#58a6ff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><span class="hn-val">+40</span><div class="hn-lab">درساً</div></div>
+ <div class="hn"><div class="hn-ic" style="background:rgba(251,191,36,.13)"><svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.9L7 23l5-3 5 3-1.2-9.1"/></svg></div><span class="hn-val">6</span><div class="hn-lab">شهادات</div></div>
  </div>
  <div class="hero-actions">
  <a href="#about" class="btn-g">تعرّف على المنصة</a>
@@ -934,86 +956,71 @@ body.light{
    </div>
  </div>
 
+ <div class="trust-bar">
+  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg><span>دفع آمن وموثوق</span></div>
+  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7a8.5 8.5 0 0 1-.9-3.8A8.38 8.38 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg><span>دعم مباشر عبر واتساب</span></div>
+  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg><span>وصول دائم وتحديثات</span></div>
+  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg><span>شهادة لكل مسار</span></div>
+ </div>
+
  <div id="tracks">
  <div class="tracks-label">المسارات التعليمية</div>
+<div class="tracks-grid">
 
- <div class="track-row t1 reveal" onclick="tryOpen('web')">
- <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=400&q=70" alt="" loading="lazy" decoding="async"></div>
- <div class="tr-body">
- <div class="tr-title">إنشاء المواقع الإلكترونية</div>
- <div class="tr-meta">
- <span class="tr-badge b1">مبتدئ</span>
- <span>10 دروس</span>
- </div>
- </div>
+ <div class="track-card t1 reveal" onclick="tryOpen('web')">
+ <div class="tc-thumb"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=400&q=70" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
+ <div class="tc-body">
+ <div class="tc-title">إنشاء المواقع الإلكترونية</div>
+ <div class="tc-meta"><span class="tr-badge b1">مبتدئ</span><span>10 دروس</span></div>
  <div class="tr-lock" id="lock-web" data-price="1000"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">1000 أوقية</span> <span class="old">2000</span></div>
- <div class="tr-arrow">&#8592;</div>
  </div>
+</div>
 
- <div class="track-row t2 reveal" onclick="tryOpen('app')">
- <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=70" alt="" loading="lazy" decoding="async"></div>
- <div class="tr-body">
- <div class="tr-title">برمجة تطبيقات الهواتف</div>
- <div class="tr-meta">
- <span class="tr-badge b2">مبتدئ</span>
- <span>9 دروس</span>
- </div>
- </div>
+ <div class="track-card t2 reveal" onclick="tryOpen('app')">
+ <div class="tc-thumb"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=70" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
+ <div class="tc-body">
+ <div class="tc-title">برمجة تطبيقات الهواتف</div>
+ <div class="tc-meta"><span class="tr-badge b2">مبتدئ</span><span>9 دروس</span></div>
  <div class="tr-lock" id="lock-app" data-price="1000"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">1000 أوقية</span> <span class="old">2000</span></div>
- <div class="tr-arrow">&#8592;</div>
  </div>
+</div>
 
- <div class="track-row t3 reveal" onclick="tryOpen('cyber')">
- <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=70" alt="" loading="lazy" decoding="async"></div>
- <div class="tr-body">
- <div class="tr-title">الأمن السيبراني</div>
- <div class="tr-meta">
- <span class="tr-badge b3">متوسط</span>
- <span>7 دروس</span>
- </div>
- </div>
+ <div class="track-card t3 reveal" onclick="tryOpen('cyber')">
+ <div class="tc-thumb"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=70" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
+ <div class="tc-body">
+ <div class="tc-title">الأمن السيبراني</div>
+ <div class="tc-meta"><span class="tr-badge b3">متوسط</span><span>7 دروس</span></div>
  <div class="tr-lock" id="lock-cyber" data-price="1000"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">1000 أوقية</span> <span class="old">2000</span></div>
- <div class="tr-arrow">&#8592;</div>
  </div>
+</div>
 
- <div class="track-row t4 reveal" onclick="tryOpen('ethical')">
- <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=70" alt="" loading="lazy" decoding="async"></div>
- <div class="tr-body">
- <div class="tr-title">الاختراق الأخلاقي</div>
- <div class="tr-meta">
- <span class="tr-badge b4">متوسط</span>
- <span>6 دروس</span>
- </div>
- </div>
+ <div class="track-card t4 reveal" onclick="tryOpen('ethical')">
+ <div class="tc-thumb"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=70" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
+ <div class="tc-body">
+ <div class="tc-title">الاختراق الأخلاقي</div>
+ <div class="tc-meta"><span class="tr-badge b4">متوسط</span><span>6 دروس</span></div>
  <div class="tr-lock" id="lock-ethical" data-price="1000"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">1000 أوقية</span> <span class="old">2000</span></div>
- <div class="tr-arrow">&#8592;</div>
  </div>
+</div>
 
- <div class="track-row t5 reveal" onclick="tryOpen('bots')">
- <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&q=70" alt="" loading="lazy" decoding="async"></div>
- <div class="tr-body">
- <div class="tr-title">صنع البوتات الذكية</div>
- <div class="tr-meta">
- <span class="tr-badge b5">مبتدئ</span>
- <span>8 دروس</span>
- </div>
- </div>
+ <div class="track-card t5 reveal" onclick="tryOpen('bots')">
+ <div class="tc-thumb"><img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&q=70" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
+ <div class="tc-body">
+ <div class="tc-title">صنع البوتات الذكية</div>
+ <div class="tc-meta"><span class="tr-badge b5">مبتدئ</span><span>8 دروس</span></div>
  <div class="tr-lock" id="lock-bots" data-price="890"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">890 أوقية</span> <span class="old">1500</span></div>
- <div class="tr-arrow">&#8592;</div>
  </div>
+</div>
 
- <div class="track-row t6 reveal" onclick="tryOpen('ai')">
- <div class="tr-thumb"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=70" alt="" loading="lazy" decoding="async"></div>
- <div class="tr-body">
- <div class="tr-title">أدوات الذكاء الاصطناعي</div>
- <div class="tr-meta">
- <span class="tr-badge b6">جميع المستويات</span>
- <span>6 دروس</span>
- </div>
- </div>
+ <div class="track-card t6 reveal" onclick="tryOpen('ai')">
+ <div class="tc-thumb"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=70" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
+ <div class="tc-body">
+ <div class="tc-title">أدوات الذكاء الاصطناعي</div>
+ <div class="tc-meta"><span class="tr-badge b6">جميع المستويات</span><span>6 دروس</span></div>
  <div class="tr-lock" id="lock-ai" data-price="2000"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span class="now">2000 أوقية</span> <span class="old">3500</span></div>
- <div class="tr-arrow">&#8592;</div>
  </div>
+</div>
+</div>
  </div>
 
  <div class="site-footer"
@@ -1033,22 +1040,30 @@ body.light{
 
   <div class="contact-sec">
     <div class="contact-label">تواصل معنا</div>
-    <div class="contact-grid">
-      <a href="https://wa.me/22236521223" target="_blank" class="contact-item">
-        <div class="ci-ic" style="background:rgba(37,211,102,.12)"><svg viewBox="0 0 24 24" fill="#25d366"><path d="M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.5 5.9L0 24l6.3-1.5C8 23.4 10 24 12 24c6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg></div>
-        <div class="ci-body"><div class="ci-t">واتساب</div><div class="ci-d">+222 36521223</div></div>
+    <div class="soc-grid">
+      <a href="https://wa.me/22236521223" target="_blank" class="soc-card soc-wa">
+        <div class="soc-ic"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.6.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2.1-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6 2 .8 2.7.9 3.7.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.8L7 20.5A10 10 0 1012 2zm0 18.3c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.3 8.3 0 1112 20.3z"/></svg></div>
+        <div class="soc-name">WhatsApp</div>
+        <div class="soc-handle">+222 36521223</div>
+        <span class="soc-btn">تواصل الآن</span>
       </a>
-      <a href="mailto:jk4355090@gmail.com" class="contact-item">
-        <div class="ci-ic" style="background:rgba(234,67,53,.12)"><svg viewBox="0 0 24 24" fill="none" stroke="#ea4335" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg></div>
-        <div class="ci-body"><div class="ci-t">البريد الإلكتروني</div><div class="ci-d">jk4355090@gmail.com</div></div>
+      <a href="mailto:jk4355090@gmail.com" class="soc-card soc-mail">
+        <div class="soc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2.5"/><path d="M3 6.5l9 6 9-6"/></svg></div>
+        <div class="soc-name">الإيميل</div>
+        <div class="soc-handle">jk4355090@gmail.com</div>
+        <span class="soc-btn">تواصل الآن</span>
       </a>
-      <a href="https://www.instagram.com/ab_jiu2" target="_blank" class="contact-item">
-        <div class="ci-ic" style="background:rgba(225,48,108,.12)"><svg viewBox="0 0 24 24" fill="none" stroke="#e1306c" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#e1306c" stroke="none"/></svg></div>
-        <div class="ci-body"><div class="ci-t">إنستغرام</div><div class="ci-d">ab_jiu2@</div></div>
+      <a href="https://www.instagram.com/ab_jiu2" target="_blank" class="soc-card soc-ig">
+        <div class="soc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="#fff" stroke="none"/></svg></div>
+        <div class="soc-name">إنستغرام</div>
+        <div class="soc-handle">@ab_jiu2</div>
+        <span class="soc-btn">تواصل الآن</span>
       </a>
-      <a href="https://www.tiktok.com/@arvos62" target="_blank" class="contact-item">
-        <div class="ci-ic" style="background:rgba(255,255,255,.08)"><svg viewBox="0 0 24 24" fill="var(--text)"><path d="M19.6 6.7a4.8 4.8 0 01-3.8-4.3V2h-3.4v13.7a2.9 2.9 0 01-2.9 2.5 2.9 2.9 0 01-2.9-2.9 2.9 2.9 0 012.9-2.9c.3 0 .5 0 .8.1V9a6.3 6.3 0 00-.8 0 6.3 6.3 0 00-6.3 6.3A6.3 6.3 0 009.5 21.6a6.3 6.3 0 006.3-6.3V8.7a8.2 8.2 0 004.8 1.5V6.8a4.9 4.9 0 01-1-.1z"/></svg></div>
-        <div class="ci-body"><div class="ci-t">تيك توك</div><div class="ci-d">arvos62@</div></div>
+      <a href="https://www.tiktok.com/@arvos62" target="_blank" class="soc-card soc-tt">
+        <div class="soc-ic"><svg viewBox="0 0 24 24" fill="#fff"><path d="M19.6 6.7a4.8 4.8 0 01-3.8-4.3V2h-3.4v13.7a2.9 2.9 0 01-2.9 2.5 2.9 2.9 0 01-2.9-2.9 2.9 2.9 0 013.7-2.8V9a6.3 6.3 0 00-7 6.3 6.3 6.3 0 006.3 6.3 6.3 6.3 0 006.3-6.3V8.7a8.2 8.2 0 004.8 1.5V6.8a4.9 4.9 0 01-1-.1z"/></svg></div>
+        <div class="soc-name">تيك توك</div>
+        <div class="soc-handle">@arvos62</div>
+        <span class="soc-btn">تواصل الآن</span>
       </a>
     </div>
   </div>
@@ -1074,7 +1089,7 @@ body.light{
 
  <div class="course-hero">
  <div class="course-eyebrow" style="color:#39d353">المسار الأول</div>
- <div class="course-banner"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=900&q=75" alt="" loading="lazy" decoding="async"></div>
+ <div class="course-banner"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=900&q=75" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
  <div class="course-title">إنشاء المواقع الإلكترونية</div>
  <div class="course-desc">من الصفر إلى موقع حقيقي منشور على الإنترنت. ستتعلم HTML وCSS وJavaScript بأسلوب عملي مباشر.</div>
  <div class="course-tags">
@@ -1860,7 +1875,7 @@ git push</pre></div>
 
  <div class="course-hero">
  <div class="course-eyebrow" style="color:#58a6ff">المسار الثاني</div>
- <div class="course-banner"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=75" alt="" loading="lazy" decoding="async"></div>
+ <div class="course-banner"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=75" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
  <div class="course-title">برمجة تطبيقات الهواتف</div>
  <div class="course-desc">من الفكرة إلى تطبيق حقيقي منشور على المتاجر. ستتعلم React Native بمساعدة Claude خطوة بخطوة.</div>
  <div class="course-tags">
@@ -2696,7 +2711,7 @@ git push</pre></div>
 
  <div class="course-hero">
  <div class="course-eyebrow" style="color:#f87171">المسار الثالث</div>
- <div class="course-banner"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900&q=75" alt="" loading="lazy" decoding="async"></div>
+ <div class="course-banner"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900&q=75" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
  <div class="course-title">الأمن السيبراني</div>
  <div class="course-desc">من فهم الشبكات إلى استخدام أدوات الأمن الاحترافية. كل شيء بالعربية مع توجيه Claude في كل خطوة.</div>
  <div class="course-tags">
@@ -3588,7 +3603,7 @@ sudo fail2ban-client status ssh</pre></div>
   </div>
   <div class="course-hero">
     <div class="course-eyebrow" style="color:#fbbf24">المسار الرابع</div>
- <div class="course-banner"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=75" alt="" loading="lazy" decoding="async"></div>
+ <div class="course-banner"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=75" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
     <div class="course-title">الاختراق الأخلاقي</div>
     <div class="course-desc">منهجية اختبار الاختراق الاحترافية من الصفر — جمع المعلومات، استغلال الثغرات، تأمين الشبكات، وكتابة التقارير.</div>
     <div class="course-tags">
@@ -4520,7 +4535,7 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
   </div>
   <div class="course-hero">
     <div class="course-eyebrow" style="color:#a78bfa">المسار الخامس</div>
- <div class="course-banner"><img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=900&q=75" alt="" loading="lazy" decoding="async"></div>
+ <div class="course-banner"><img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=900&q=75" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
     <div class="course-title">صنع البوتات الذكية</div>
     <div class="course-desc">من الفكرة إلى بوت تلجرام حقيقي يعمل 24 ساعة — يقبل الدفع، يحفظ البيانات، ويعمل تلقائياً بدون تدخل منك.</div>
     <div class="course-tags">
@@ -5464,7 +5479,7 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
   </div>
   <div class="course-hero">
     <div class="course-eyebrow" style="color:#2dd4bf">المسار السادس</div>
- <div class="course-banner"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=75" alt="" loading="lazy" decoding="async"></div>
+ <div class="course-banner"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=75" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
     <div class="course-title">أدوات الذكاء الاصطناعي</div>
     <div class="course-desc">من فهم أساسيات الذكاء الاصطناعي إلى توظيفه في كل مجال — بناء مشاريع حقيقية وإتقان فن التواصل مع النماذج الذكية.</div>
     <div class="course-tags">
@@ -6067,35 +6082,38 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d</pre></div>
   <div class="cert-box">
     <button class="cert-close" onclick="closeCert()">✕</button>
     <div class="cert-inner">
+      <div class="cert-frame">
       <div class="cert-border">
         <div class="cert-logo">مِهارة</div>
-        <div class="cert-logo-sub">MAHARA ACADEMY</div>
+        <div class="cert-logo-sub">MAHARA</div>
+        <div class="cert-logo-tag">Mahara Platform — Skills for the Future</div>
+        <div class="cert-rule"></div>
         <div class="cert-heading">شهادة إتمام</div>
+        <div class="cert-intro">تشهد منصّة مِهارة بأنّ المُتدرّب/ة:</div>
         <div class="cert-name" id="cert-name">اسم الطالب</div>
-        <div class="cert-body">
-          أتمّ بنجاح جميع دروس مسار<br>
-          وأنجز المشروع النهائي المطلوب
-        </div>
+        <div class="cert-course-lbl">قد أكمل بنجاح الدّورة التّدريبيّة:</div>
         <div class="cert-track" id="cert-track">اسم المسار</div>
-        <div class="cert-body" style="font-size:.72rem;color:#999">
-          تُمنح هذه الشهادة تقديراً للجهد المبذول وإثباتاً للمهارة المكتسبة
-        </div>
+        <div class="cert-period">وأنجز المشروع النهائي المطلوب، تقديراً للجهد المبذول وإثباتاً للمهارة المكتسبة.</div>
         <div class="cert-footer">
-          <div class="cert-sig">
-            <div class="cert-sig-mark">مِ</div>
+          <div class="cert-col">
             <div class="cert-sig-line"></div>
-            <span>إدارة مِهارة</span>
+            <div class="cert-sig-t">توقيع إدارة مِهارة</div>
+            <div class="cert-sig-s">المدير التنفيذي</div>
           </div>
-          <div class="cert-date" id="cert-date"></div>
-          <div class="cert-sig">
-            <div class="cert-sig-mark" style="font-style:normal;transform:rotate(0)">✦</div>
-            <div class="cert-sig-line"></div>
-            <span>منصة مِهارة</span>
+          <div class="cert-col">
+            <div class="cert-seal" aria-hidden="true">
+              <div class="cert-seal-name">مِهارة</div>
+              <div class="cert-seal-sub">الختم الرسمي</div>
+            </div>
+          </div>
+          <div class="cert-col">
+            <div class="cert-meta">
+              رقم الشهادة<br><b id="cert-no">MH-2026-0000</b><br>
+              تاريخ الإصدار<br><b id="cert-date">—</b>
+            </div>
           </div>
         </div>
-        <div class="cert-seal" aria-hidden="true">
-          <div class="cert-seal-core">مِ</div>
-        </div>
+      </div>
       </div>
     </div>
     <div class="cert-actions">
@@ -6194,7 +6212,7 @@ try{
 <!-- LEGAL PAGES -->
 <div class="page legal-pg" id="legal-terms">
   <div class="course-hero"><button class="back-btn" onclick="closeLegal()">&#8594;</button><div class="course-eyebrow">وثيقة</div><h1 class="course-title">الشروط والأحكام</h1></div>
-  <div class="legal-body"><p>باستخدامك منصة مِهارة وشرائك لأيّ مسار، فإنّك توافق على الشروط التالية:</p><h3>الاشتراك والوصول</h3><p>عند إتمام الدفع والتحقّق من الإيصال، يُفتح لك المسار المشترَك فيه على نفس الجهاز والمتصفّح. الاشتراك شخصيّ مخصّص لك وحدك.</p><h3>الاستخدام</h3><p>محتوى المنصة مخصّص للاستخدام الشخصيّ التعليميّ فقط. لا يجوز إعادة بيعه أو نشره أو مشاركته مع الآخرين دون إذن.</p><h3>المحتوى</h3><p>نسعى لتقديم محتوى دقيق ومحدّث، ونطوّره باستمرار. النتائج التي تحقّقها تعتمد على مدى التزامك وتطبيقك العمليّ.</p><h3>التعديلات</h3><p>نحتفظ بحقّ تحديث المحتوى أو الأسعار أو هذه الشروط في أيّ وقت بما يخدم تطوير المنصة.</p><div style="text-align:center;margin-top:22px"><button class="back-btn" onclick="closeLegal()" style="position:static">العودة للرئيسية</button></div></div>
+  <div class="legal-body"><p>باستخدامك منصة مِهارة وشرائك لأيّ مسار، فإنّك توافق على الشروط التالية:</p><h3>الاشتراك والوصول</h3><p>عند إتمام الدفع والتحقّق من الإيصال، يُفتح لك المسار المشترَك فيه مرتبطاً بحسابك، فتصل إليه من أيّ جهاز تسجّل دخولك منه. الاشتراك شخصيّ مخصّص لك وحدك.</p><h3>الاستخدام</h3><p>محتوى المنصة مخصّص للاستخدام الشخصيّ التعليميّ فقط. لا يجوز إعادة بيعه أو نشره أو مشاركته مع الآخرين دون إذن.</p><h3>المحتوى</h3><p>نسعى لتقديم محتوى دقيق ومحدّث، ونطوّره باستمرار. النتائج التي تحقّقها تعتمد على مدى التزامك وتطبيقك العمليّ.</p><h3>التعديلات</h3><p>نحتفظ بحقّ تحديث المحتوى أو الأسعار أو هذه الشروط في أيّ وقت بما يخدم تطوير المنصة.</p><div style="text-align:center;margin-top:22px"><button class="back-btn" onclick="closeLegal()" style="position:static">العودة للرئيسية</button></div></div>
 </div>
 <div class="page legal-pg" id="legal-privacy">
   <div class="course-hero"><button class="back-btn" onclick="closeLegal()">&#8594;</button><div class="course-eyebrow">وثيقة</div><h1 class="course-title">سياسة الخصوصية</h1></div>
@@ -6436,11 +6454,13 @@ function showMyAccount() {
     coursesHtml = '<div class="pf-empty">لم تشترك في أي مسار بعد. تصفّح المسارات وابدأ رحلتك.</div>';
   }
   const ov = document.getElementById('profileOv');
+  var doneTotal=0; try{Object.keys(progressSet).forEach(function(t){doneTotal+=progressSet[t].size;});}catch(e){}
   document.getElementById('pfBody').innerHTML =
     '<div class="pf-top"><div class="pf-avatar">'+initial+'</div>'+
     '<div class="pf-info"><div class="pf-email">'+email+'</div>'+
-    '<div class="pf-meta">طالب في منصة مهارة</div></div></div>'+
+    '<div class="pf-meta">طالب في منصة مِهارة</div></div></div>'+
     '<div class="pf-stats"><div class="pf-stat"><div class="pf-num">'+ownedList.length+'</div><div class="pf-lbl">مساراتي</div></div>'+
+    '<div class="pf-stat"><div class="pf-num">'+doneTotal+'</div><div class="pf-lbl">دروس أكملتها</div></div>'+
     '<div class="pf-stat"><div class="pf-num">'+(6-ownedList.length)+'</div><div class="pf-lbl">متاح للاشتراك</div></div></div>'+
     '<div class="pf-sec-title">المسارات المفتوحة</div>'+
     '<div class="pf-courses">'+coursesHtml+'</div>'+
@@ -6538,6 +6558,13 @@ async function openCert(trackId){
   document.getElementById('cert-name').textContent=studentName;
   document.getElementById('cert-track').textContent=COURSE_NAMES[trackId];
   document.getElementById('cert-date').textContent=new Date().toLocaleDateString('ar-EG',{year:'numeric',month:'long',day:'numeric'});
+  try{
+    var base=(currentUser.id||'')+trackId;
+    var h=0; for(var k=0;k<base.length;k++){h=((h<<5)-h+base.charCodeAt(k))|0;}
+    var num=(Math.abs(h)%9000+1000);
+    var tcode=trackId.substring(0,2).toUpperCase();
+    document.getElementById('cert-no').textContent='MH-'+new Date().getFullYear()+'-'+tcode+num;
+  }catch(e){}
   document.getElementById('cert-overlay').classList.add('show');
 }
 function closeCert(){ document.getElementById('cert-overlay').classList.remove('show'); }
